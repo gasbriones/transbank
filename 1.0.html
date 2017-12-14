@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <!-- External dependencies -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-migrate/1.4.1/jquery-migrate.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/sinon.js/1.15.4/sinon.js"></script>
+    <script src="//unpkg.com/@atlassian/aui@7.1.1/dist/aui/js/aui.js"></script>
+    <script src="//unpkg.com/@atlassian/aui@7.1.1/dist/aui/js/aui-experimental.js"></script>
+    <script src="//unpkg.com/@atlassian/aui@7.1.1/dist/aui/js/aui-datepicker.js"></script>
+    <link rel="stylesheet" type="text/css" href="//unpkg.com/@atlassian/aui@7.1.1/dist/aui/css/aui.css"/>
+    <link rel="stylesheet" type="text/css" href="//unpkg.com/@atlassian/aui@7.1.1/dist/aui/css/aui-experimental.css"/>
+    <!-- / External dependencies -->
+
+
+</head>
+<body>
+<form class="aui">
+
+
+    <!--SECCION DE DETALLE DE IDEA-->
+    <h3>2.0 Titulo</h3>
+
+    <div class="field-group">
+        <label for="comment-email">Nombre Iniciativa
+            <span class="aui-icon icon-required">(required)</span></label>
+        <input class="text medium-field" type="text"
+               id="comment-email" name="comment-email" placeholder="Nombre de Idea o Iniciativa">
+        <div class="description">Nombre de Idea o Iniciativa</div>
+    </div>
+    <div class="field-group">
+        <label for="comment-email">Nombre Sponsor
+            <span class="aui-icon icon-required">(required)</span></label>
+        <input class="text medium-field" type="text"
+               id="comment-email" name="comment-email" placeholder="">
+        <div class="description"> </div>
+    </div>
+    <div class="field-group">
+        <label for="comment-email">Cargo Sponsor
+            <span class="aui-icon icon-required">(required)</span></label>
+        <input class="text medium-field" type="text"
+               id="comment-email" name="comment-email" placeholder="">
+        <div class="description"> </div>
+    </div>
+    <div class="field-group">
+        <label for="comment-email">Nombre Solicitante
+            <span class="aui-icon icon-required">(required)</span></label>
+        <input class="text medium-field" type="text"
+               id="comment-email" name="comment-email" placeholder="">
+        <div class="description"> </div>
+    </div>
+    <div class="field-group">
+        <label for="comment-email">Cargo Solicitante
+            <span class="aui-icon icon-required">(required)</span></label>
+        <input class="text medium-field" type="text"
+               id="comment-email" name="comment-email" placeholder="">
+        <div class="description"> </div>
+    </div>
+    <div class="field-group">
+        <label for="comment-email">Ãƒï¿½rea Solicitante
+            <span class="aui-icon icon-required">(required)</span></label>
+        <input class="text medium-field" type="text"
+               id="comment-email" name="comment-email" placeholder="">
+        <div class="description"> </div>
+    </div>
+    <div class="field-group">
+        <label for="comment-email">Nombre Gestor de la Demanda
+            <span class="aui-icon icon-required">(required)</span></label>
+        <input class="text medium-field" type="text"
+               id="comment-email" name="comment-email" placeholder="">
+        <div class="description"> </div>
+    </div>
+    <div class="field-group">
+        <label for="comment-email">Fecha Solicitud
+            <span class="aui-icon icon-required">(required)</span></label>
+        <input class="text medium-field" type="text"
+               id="comment-email" name="comment-email" placeholder="DD/MM/YYYY">
+        <div class="description"> </div>
+    </div>
+
+    <div class="field-group">
+        <label for="comment-email">Fecha Requerida Idea/ Iniciativa Implementada
+            <span class="aui-icon icon-required">(required)</span></label>
+        <input class="text medium-field" type="text"
+               id="comment-email" name="comment-email" placeholder="DD/MM/YYY">
+        <div class="description"> </div>
+    </div>
+    <div class="field-group">
+        <label for="comment-input">Resumen Ejecutivo</label>
+        <textarea class="textarea" name="comment-input"
+                  id="comment-input" placeholder="Realizar resumen a alto nivel, considerando la principal informaci&oacute;n obtenida a trav&eacute;s del proceso"></textarea>
+    </div>
+    <div class="field-group">
+        <label for="comment-input">Objetivos</label>
+        <textarea class="textarea" name="comment-input"
+                  id="comment-input" placeholder="Definir el o los objetivos que persigue la iniciativa. Considerar m&aacute;ximo tres objetivos."></textarea>
+    </div>
+    <div class="field-group">
+        <label for="comment-input">Descripci&oacute;n General</label>
+        <textarea class="textarea" name="comment-input"
+                  id="comment-input" placeholder="Descripci&oacute;n general de la idea / iniciativa. Indicar c&uacute;ales son las principales funciones que la idea debe realizar."></textarea>
+        <!--************ Faltan campos que debo darle una vuelta-->
+    </div>
+    <div class="field-group">
+        <label for="comment-input"> Situaci&oacute;n Actual (AS IS)</label>
+        <textarea class="textarea" name="comment-input"
+                  id="comment-input" placeholder="Descripci&oacute;n de la situaci&oacute;n actual desde la cual se desea realizar las mejoras."></textarea>
+    </div>
+    <div class="field-group">
+        <label for="comment-input"> Situaci&oacute;n Deseada (TO BE)</label>
+        <textarea class="textarea" name="comment-input"
+                  id="comment-input" placeholder="Descripci&oacute;n de la situaci&oacute;n a la cual se desea llegar. Qu&eacute; se busca, qu&eacute; se debe cumplir, c&oacute;omo debe operar."></textarea>
+    </div>
+    <div class="field-group">
+        <label for="comment-input"> Supuestos </label>
+        <textarea class="textarea" name="comment-input"
+                  id="comment-input" placeholder="Describir c&uacute;ales son los supuestos que sustentan la situaci&oacute;n Deseada To Be."></textarea>
+    </div>
+    <div class="field-group">
+        <label for="comment-input"> Restricciones </label>
+        <textarea class="textarea" name="comment-input"
+                  id="comment-input" placeholder="Describir las principales restricciones de negocio y/o normativas que tiene la situaci&oacute;n Deseada To Be."></textarea>
+    </div>
+    <div class="field-group">
+        <label for="comment-input"> Resumen de Beneficios Esperados </label>
+        <textarea class="textarea" name="comment-input"
+                  id="comment-input" placeholder="Describir los principales beneficios cualitativos."></textarea>
+    </div>
+    <div class="field-group">
+        <label for="comment-input"> Oferta de Valor </label>
+        <textarea class="textarea" name="comment-input"
+                  id="comment-input" placeholder="Describir cu&aacute;l es el valor entregado desde el punto de vista del Cliente, Canal, Precio, Servicio o Comunicaci&oacute;n."></textarea>
+    </div>
+
+    <h3>1.2 TIPO DE SOLICITANTE DE LA IDEA / INICIATIVA</h3>
+    <br><br>
+    <fieldset class="SolicitanteIdeaIniciativa">
+        <h5>Solicitante de Idea / Iniciativa</h5>
+        <br>
+
+        <table class="aui">
+            <tbody>
+            <tr>
+                <td headers="name">
+                    <h5>Normativo / Regulador</h5>
+                </td>
+                <td headers="type">
+                    <div class="checkbox">
+                        <input class="checkbox" type="checkbox" name="checkBox1" id="checkBox1">
+                        <label for="checkBox1">Banco Central</label>
+                    </div>
+                </td>
+                <td class="order" headers="order">
+                    <div class="checkbox">
+                        <input class="checkbox" type="checkbox" name="checkBox2" id="checkBox2">
+                        <label for="checkBox2">FNE</label>
+                    </div>
+                </td>
+                <td class="action" headers="action">
+                    <div class="checkbox">
+                        <input class="checkbox" type="checkbox" name="checkBox3" id="checkBox3">
+                        <label for="checkBox3">Norma PCI</label>
+                    </div>
+                </td>
+
+                <td class="action" headers="action">
+                    <div class="checkbox">
+                        <input class="checkbox" type="checkbox" name="checkBox4" id="checkBox4">
+                        <label for="checkBox4">SBIF</label>
+                    </div>
+                </td>
+
+                <td class="action" headers="action">
+                    <div class="checkbox">
+                        <input class="checkbox" type="checkbox" name="checkBox5" id="checkBox5">
+                        <label for="checkBox5">SERNAC Financiero</label>
+                    </div>
+                </td>
+
+                <td class="action" headers="action">
+                    <div class="checkbox">
+                        <input class="checkbox" type="checkbox" name="checkBox6" id="checkBox6">
+                        <label for="checkBox6">SII</label>
+                    </div>
+                </td>
+
+                <td class="action" headers="action">
+                    <div class="checkbox">
+                        <input class="checkbox" type="checkbox" name="checkBox7" id="checkBox7">
+                        <label for="checkBox7">Otros</label>
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </fieldset>
+
+
+
+    <br>
+    <table class="aui">
+        <tbody>
+        <tr>
+            <td headers="name">
+                <h5>Emisor</h5>
+            </td>
+            <td headers="type">
+                <div class="checkbox">
+                    <input class="checkbox" type="checkbox" name="checkBox1" id="checkBox1">
+                    <label for="checkBox1">Banco BICE</label>
+                </div>
+
+                <div class="checkbox">
+                    <input class="checkbox" type="checkbox" name="checkBox8" id="checkBox8">
+                    <label for="checkBox8">BBVA</label>
+                </div>
+            </td>
+            <td class="order" headers="order">
+                <div class="checkbox">
+                    <input class="checkbox" type="checkbox" name="checkBox2" id="checkBox2">
+                    <label for="checkBox2">Banco de Chile</label>
+                </div>
+
+                <div class="checkbox">
+                    <input class="checkbox" type="checkbox" name="checkBox9" id="checkBox9">
+                    <label for="checkBox9">Bci</label>
+                </div>
+            </td>
+            <td class="action" headers="action">
+                <div class="checkbox">
+                    <input class="checkbox" type="checkbox" name="checkBox3" id="checkBox3">
+                    <label for="checkBox3">Banco Estado</label>
+                </div>
+
+                <div class="checkbox">
+                    <input class="checkbox" type="checkbox" name="checkBox10" id="checkBox10">
+                    <label for="checkBox10">Ita&uacute; Corpbanca</label>
+                </div>
+            </td>
+
+            <td class="action" headers="action">
+                <div class="checkbox">
+                    <input class="checkbox" type="checkbox" name="checkBox4" id="checkBox4">
+                    <label for="checkBox4">Banco Falabella</label>
+                </div>
+
+                <div class="checkbox">
+                    <input class="checkbox" type="checkbox" name="checkBox11" id="checkBox11">
+                    <label for="checkBox11">JP Morgan Chase Bank</label>
+                </div>
+            </td>
+
+            <td class="action" headers="action">
+                <div class="checkbox">
+                    <input class="checkbox" type="checkbox" name="checkBox5" id="checkBox5">
+                    <label for="checkBox5">Banco</label>
+                </div>
+
+                <div class="checkbox">
+                    <input class="checkbox" type="checkbox" name="checkBox12" id="checkBox12">
+                    <label for="checkBox12">Scotiabank</label>
+                </div>
+            </td>
+
+            <td class="action" headers="action">
+                <div class="checkbox">
+                    <input class="checkbox" type="checkbox" name="checkBox6" id="checkBox6">
+                    <label for="checkBox6">Banco Santander</label>
+                </div>
+
+                <div class="checkbox">
+                    <input class="checkbox" type="checkbox" name="checkBox13" id="checkBox13">
+                    <label for="checkBox13">Scotiabank</label>
+                </div>
+            </td>
+
+            <td class="action" headers="action">
+                <div class="checkbox">
+                    <input class="checkbox" type="checkbox" name="checkBox7" id="checkBox7">
+                    <label for="checkBox7">Banco Security</label>
+                </div>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+
+
+    <br>
+    <table class="aui">
+        <tbody>
+        <tr>
+            <td headers="name">
+                <h5>Tipo de Solicitud</h5>
+            </td>
+            <td headers="type">
+                <div class="checkbox">
+                    <input class="checkbox" type="checkbox" name="checkBox1" id="checkBox1">
+                    <label for="checkBox1">Negocio</label>
+                </div>
+            </td>
+            <td class="order" headers="order">
+                <div class="checkbox">
+                    <input class="checkbox" type="checkbox" name="checkBox2" id="checkBox2">
+                    <label for="checkBox2">Industria</label>
+                </div>
+            </td>
+            <td class="action" headers="action">
+                <div class="checkbox">
+                    <input class="checkbox" type="checkbox" name="checkBox3" id="checkBox3">
+                    <label for="checkBox3">Normativo</label>
+                </div>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+
+
+    <br>
+    Interno Transbank
+    <div class="radio">
+        <input class="radio" type="radio" checked="checked" name="radiobuttons" id="radioButtonOne">
+        <label for="radioButtonOne">Si</label>
+    </div>
+    <div class="radio">
+        <input class="radio" type="radio" checked="checked" name="radiobuttons" id="radioButtonOne">
+        <label for="radioButtonOne">No</label>
+    </div>
+
+
+    <br>
+    <table class="aui">
+        <tbody>
+        <tr>
+            <td headers="name">
+                <h5>Marcas</h5>
+            </td>
+            <td headers="type">
+                <div class="checkbox">
+                    <input class="checkbox" type="checkbox" name="checkBox1" id="checkBox1">
+                    <label for="checkBox1">American Express</label>
+                </div>
+            </td>
+            <td class="order" headers="order">
+                <div class="checkbox">
+                    <input class="checkbox" type="checkbox" name="checkBox2" id="checkBox2">
+                    <label for="checkBox2">Diners Club</label>
+                </div>
+            </td>
+            <td class="action" headers="action">
+                <div class="checkbox">
+                    <input class="checkbox" type="checkbox" name="checkBox3" id="checkBox3">
+                    <label for="checkBox3">Magna</label>
+                </div>
+            </td>
+            <td class="action" headers="action">
+                <div class="checkbox">
+                    <input class="checkbox" type="checkbox" name="checkBox4" id="checkBox4">
+                    <label for="checkBox4">MasterCard</label>
+                </div>
+            </td>
+
+            <td class="action" headers="action">
+                <div class="checkbox">
+                    <input class="checkbox" type="checkbox" name="checkBox5" id="checkBox5">
+                    <label for="checkBox5">Visa</label>
+                </div>
+            </td>
+            <td class="action" headers="action">
+                <div class="checkbox">
+                    <input class="checkbox" type="checkbox" name="checkBox6" id="checkBox6">
+                    <label for="checkBox6">Otras</label>
+                </div>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+
+
+
+    <br>
+    <table class="aui">
+        <tbody>
+        <tr>
+            <td headers="name">
+                <h5>Tipo de Solicitud</h5>
+            </td>
+            <td headers="type">
+                <div class="checkbox">
+                    <input class="checkbox" type="checkbox" name="checkBox1" id="checkBox1">
+                    <label for="checkBox1">Negocio</label>
+                </div>
+            </td>
+            <td class="action" headers="action">
+                <div class="checkbox">
+                    <input class="checkbox" type="checkbox" name="checkBox3" id="checkBox3">
+                    <label for="checkBox3">Normativo</label>
+                </div>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+
+
+    <br>
+    <h3>1.3 RELACIONES DE LA IDEA / INICIATIVA</h3>
+
+
+    <br>
+    <table class="aui">
+        <tbody>
+        <tr>
+            <td headers="name">
+                <h5>Usuario Impactado</h5>
+            </td>
+            <td headers="type">
+                <div class="checkbox">
+                    <input class="checkbox" type="checkbox" name="checkBox1" id="checkBox1">
+                    <label for="checkBox1">Cliente Interno</label>
+                </div>
+            </td>
+            <td class="order" headers="order">
+                <div class="checkbox">
+                    <input class="checkbox" type="checkbox" name="checkBox2" id="checkBox2">
+                    <label for="checkBox2">Cliente Externo Comercio</label>
+                </div>
+            </td>
+            <td class="action" headers="action">
+                <div class="checkbox">
+                    <input class="checkbox" type="checkbox" name="checkBox3" id="checkBox3">
+                    <label for="checkBox3">Cliente Externo Emisores</label>
+                </div>
+            </td>
+            <td class="action" headers="action">
+                <div class="checkbox">
+                    <input class="checkbox" type="checkbox" name="checkBox4" id="checkBox4">
+                    <label for="checkBox4">Cliente Externo Tarjetahabiente</label>
+                </div>
+            </td>
+
+            <td class="action" headers="action">
+                <div class="checkbox">
+                    <input class="checkbox" type="checkbox" name="checkBox1" id="checkBox1">
+                    <label for="checkBox1">Cliente Interno</label>
+                </div>
+            </td>
+            <td class="action" headers="action">
+                <div class="checkbox">
+                    <input class="checkbox" type="checkbox" name="checkBox3" id="checkBox3">
+                    <label for="checkBox3">Cliente Externo Comercio</label>
+                </div>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+
+    <br>
+
+    <div class="field-group">
+        <label for="text-input">Cantidad de Usuarios Impactados<span class="aui-icon icon-required">required</span></label>
+        <input class="text" type="text" id="text-input" name="text-input" title="Text input">
+        <div class="description"></div>
+    </div>
+
+    <h5>Productos </h5>
+    Indicar los productos impactados con la idea / iniciativa
+
+    <div class="field-group">
+        <label for="multiselect">FAMILIA FINANCIERO</label>
+        <select class="multi-select" size="4" multiple="multiple" id="multiselect" name="multiselect">
+            <option>Cuotas</option>
+            <option>Compra Normal con Pago de Gracia</option>
+            <option>Prepago</option>
+            <option>Ahorro con tarjeta</option>
+        </select>
+    </div>
+    <div class="field-group">
+        <label for="multiselect">FAMILIA MOBILE</label>
+        <select class="multi-select" size="4" multiple="multiple" id="multiselect" name="multiselect">
+            <option>ONEPAY ECOMMERCE</option>
+            <option>ONEPAY MCOMMERCE</option>
+            <option>VISA CHECKOUT</option>
+            <option>MASTERPASS</option>
+        </select>
+    </div>
+    <div class="field-group">
+        <label for="multiselect">FAMILIA NICHO T&E</label>
+        <select class="multi-select" size="4" multiple="multiple" id="multiselect" name="multiselect">
+            <option>POS HOTEL Y RENT A CAR</option>
+            <option>POS MULTICÃƒâ€œDIGO</option>
+            <option>GDS</option>
+            <option>DCC</option>
+            <option>IMPRINTER</option>
+            <option>POS VIRTUAL</option>
+        </select>
+    </div>
+
+    <div class="field-group">
+        <label for="multiselect">FAMILIA PRESCENCIAL</label>
+        <select class="multi-select" size="4" multiple="multiple" id="multiselect" name="multiselect">
+            <option>POS INTEGRADO</option>
+            <option>POS RETAIL STANDARD</option>
+            <option>POS AVANCE</option>
+            <option>POS AUTOSERVICIO</option>
+            <option>HOST TO HOST PINPAD</option>
+            <option>MPOS</option>
+            <option>MPOS GRANDES SUPERFICIES</option>
+            <option>CHIP / CONTACTLESS</option>
+            <option>HOST TO HOST ON US</option>
+            <option>HOST AUTOSERVICIO</option>
+        </select>
+    </div>
+    <div class="field-group">
+        <label for="multiselect">FAMILIA NO PRESCENCIAL</label>
+        <select class="multi-select" size="4" multiple="multiple" id="multiselect" name="multiselect">
+            <option>WEBPAY PLUS / AUTORIZACIÓN Y CAPTURA EN LÍNEA Y</option>
+            <option>WEBPAY PLUS MALL</option>
+            <option>WEBPAY PLUS BOTONES</option>
+            <option>WEBPAY ONECLICK</option>
+            <option>WEBPAY CALL CENTER</option>
+            <option>WEBPAY TRANSACCIÓN</option>
+            <option>WEBPAY.CL</option>
+            <option>WEBPAY ONECLICK MULTICÓDIGO</option>
+        </select>
+    </div>
+    <div class="field-group">
+        <label for="multiselect">FAMILIA SOLUCIÓN EMERGENTE</label>
+        <select class="multi-select" size="4" multiple="multiple" id="multiselect" name="multiselect">
+            <option>TASA DE INTERCAMBIO CRÉDITO</option>
+            <option>VOUCHER COMO BOLETA</option>
+            <option>ADQUIRENCIA BANCO ESTADO</option>
+            <option>MAGA CHIP</option>
+        </select>
+    </div>
+    <div class="field-group">
+        <label for="multiselect">NICHO RECAUDACIÓN</label>
+        <select class="multi-select" size="4" multiple="multiple" id="multiselect" name="multiselect">
+            <option>PATPASS</option>
+            <option>PATPASS BY WEBPAY</option>
+        </select>
+    </div>
+    <div class="field-group">
+        <label for="multiselect">OTRO</label>
+        <select class="multi-select" size="4" multiple="multiple" id="multiselect" name="multiselect">
+            <option>NUEVO PRODUCTO</option>
+            <option>NO APLICA</option>
+        </select>
+    </div>
+    <h5> Canales </h5>
+    Indicar los canales impactados con la idea / iniciativa
+
+
+    <br>
+    <table class="aui">
+        <tbody>
+        <tr>
+            <td headers="name">
+
+            </td>
+            <td headers="type">
+                <div class="checkbox">
+                    <input class="checkbox" type="checkbox" name="checkBox1" id="checkBox1">
+                    <label for="checkBox1">CONTACT CENTER</label>
+                </div>
+            </td>
+            <td class="order" headers="order">
+                <div class="checkbox">
+                    <input class="checkbox" type="checkbox" name="checkBox2" id="checkBox2">
+                    <label for="checkBox2">EJECUTIVO COMERCIAL</label>
+                </div>
+            </td>
+            <td class="action" headers="action">
+                <div class="checkbox">
+                    <input class="checkbox" type="checkbox" name="checkBox3" id="checkBox3">
+                    <label for="checkBox3">EJECUTIVO SERVICIO</label>
+                </div>
+            </td>
+            <td class="action" headers="action">
+                <div class="checkbox">
+                    <input class="checkbox" type="checkbox" name="checkBox4" id="checkBox4">
+                    <label for="checkBox4">EJECUTIVO VENTA</label>
+                </div>
+            </td>
+
+            <td class="action" headers="action">
+                <div class="checkbox">
+                    <input class="checkbox" type="checkbox" name="checkBox5" id="checkBox5">
+                    <label for="checkBox5">PORTAL</label>
+                </div>
+            </td>
+            <td class="action" headers="action">
+                <div class="checkbox">
+                    <input class="checkbox" type="checkbox" name="checkBox6" id="checkBox6">
+                    <label for="checkBox6">SUCURSAL</label>
+                </div>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+    <br>
+    <div class="field-group">
+        <label for="comment-input">INICIATIVAS PREDECESORAS (OPCIONAL)</label>
+        <textarea class="textarea" name="comment-input"
+                  id="comment-input" placeholder="Indicar las ideas / iniciativas que preceden a la propuesta"></textarea>
+    </div>
+    <div class="field-group">
+        <label for="comment-input">INICIATIVAS HABILITADAS (OPCIONAL)</label>
+        <textarea class="textarea" name="comment-input"
+                  id="comment-input" placeholder="Indicar las ideas / iniciativas que serán habilitadas por la propuesta"></textarea>
+    </div>
+
+    <h3>1.4 APROBACIONES - USO EXCLUSIVO GESTI&Oacute;N DE LA DEMANDA</h3>
+</form>
+
+
+
+</body>
+</html>
