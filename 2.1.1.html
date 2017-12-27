@@ -1,0 +1,869 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <!-- External dependencies -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-migrate/1.4.1/jquery-migrate.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/sinon.js/1.15.4/sinon.js"></script>
+    <script src="//unpkg.com/@atlassian/aui@7.1.1/dist/aui/js/aui.js"></script>
+    <script src="//unpkg.com/@atlassian/aui@7.1.1/dist/aui/js/aui-experimental.js"></script>
+    <script src="//unpkg.com/@atlassian/aui@7.1.1/dist/aui/js/aui-datepicker.js"></script>
+    <link rel="stylesheet" type="text/css" href="//unpkg.com/@atlassian/aui@7.1.1/dist/aui/css/aui.css"/>
+    <link rel="stylesheet" type="text/css" href="//unpkg.com/@atlassian/aui@7.1.1/dist/aui/css/aui-experimental.css"/>
+    <!-- / External dependencies -->
+
+
+</head>
+<body>
+<form class="aui">
+    <div class="aui-page-panel">
+        <div class="aui-page-panel-inner">
+            <section class="aui-page-panel-content">
+                <div class="aui-group">
+                    <div class="aui-item">
+                        <h5>Definiciones nivel de madurez de las capacidades</h5>
+                        <table class="aui">
+                            <thead>
+                            <tr>
+                                <th>Capacidad</th>
+                                <th>Nivel de Madurez Básico</th>
+                                <th>Nivel de Madurez Intermedio</th>
+                                <th>Nivel de Madurez Avanzado</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td headers="basic-number">Planificación Presupuestaria</td>
+                                <td headers="basic-fname">
+                                    <ul>
+                                        <li>La planificación presupuestaria es llevada a cabo por cada área de forma
+                                            independiente en base a un volumen de recursos distribuido por el Gerente
+                                            General
+                                        </li>
+                                        <li>No existe periodicidad formal de seguimiento del presupuesto</li>
+
+                                        <li>La asignación de recursos en cada área se realiza contemplando las
+                                            necesidades propias de cada área
+                                        </li>
+                                        <li> presupuesto de cada área contempla un único escenario posible sin análisis
+                                            de riesgos
+                                        </li>
+                                        <li> existe un formato padronizado en la organización para la construcción y
+                                            seguimiento del presupuesto
+                                        </li>
+
+                                    </ul>
+                                </td>
+                                <td headers="basic-lname">
+                                    <ul>
+                                        <li> La planificación presupuestaria es llevada a cabo por un equipo responsable
+                                            en
+                                            la organización de forma coordinada con la participación de todas las áreas
+                                            siguiendo las directrices de la compañía y el Gerente General
+                                        </li>
+                                        <li> proceso presupuestario se realiza de forma anual y no existe seguimiento
+                                            periódico
+                                        </li>
+                                        <li> La asignación de recursos se realiza contemplando los objetivos
+                                            estratégicos de
+                                            la compañía establecido por el equipo responsable de construir el
+                                            presupuesto
+                                        </li>
+                                        <li> El presupuesto contempla varios escenarios posibles e incluye análisis de
+                                            riesgos
+                                        </li>
+                                        <li> Existe un formato padronizado en la organización establecido y completado
+                                            por
+                                            el equipo responsable de su construcción
+                                        </li>
+                                    </ul>
+                                </td>
+                                <td headers="basic-username" style="background: #FBE5D6">
+                                    <ul>
+                                        <li>La planificación presupuestaria es llevada a cabo por un equipo responsable
+                                            en
+                                            la organización de forma coordinada con la participación de todas las áreas
+                                            siguiendo las directrices de la compañía y el Gerente General
+                                        </li>
+                                        <li>El proceso presupuestario se realiza de forma anual pudiendo realizarse
+                                            ajustes
+                                            en caso que se a necesario y posee un seguimiento mensual por parte del
+                                            equipo
+                                            responsable.
+                                        </li>
+                                        <li>La asignación de recursos se realiza contemplando los objetivos estratégicos
+                                            de
+                                            la compañía con la participación activa de cada responsable de área pudiendo
+                                            existir responsabilidades comunes en varias áreas
+                                        </li>
+                                        <li>Contempla análisis de sensibilidad en sus resultados y niveles de tolerancia
+                                            al
+                                            riesgo existiendo la posibilidad de reasignan recursos en caso que los
+                                            supuestos
+                                            de construcción del presupuesto se alteren
+                                        </li>
+                                        <li>Existe un formato padronizado establecido por el equipo responsable y
+                                            completado
+                                            por cada área
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td headers="basic-number">Gestión de la Demanda & PMO</td>
+                                <td headers="basic-fname" style="background: #FBE5D6">
+                                    <ul>
+                                        <li>La planificación presupuestaria es llevada a cabo por cada área de forma
+                                            independiente en base a un volumen de recursos distribuido por el Gerente
+                                            General
+                                        </li>
+                                        <li>No existe periodicidad formal de seguimiento del presupuesto</li>
+
+                                        <li>La asignación de recursos en cada área se realiza contemplando las
+                                            necesidades propias de cada área
+                                        </li>
+                                        <li> presupuesto de cada área contempla un único escenario posible sin análisis
+                                            de riesgos
+                                        </li>
+                                        <li> existe un formato padronizado en la organización para la construcción y
+                                            seguimiento del presupuesto
+                                        </li>
+
+                                    </ul>
+                                </td>
+                                <td headers="basic-lname">
+                                    <ul>
+                                        <li> La planificación presupuestaria es llevada a cabo por un equipo responsable
+                                            en
+                                            la organización de forma coordinada con la participación de todas las áreas
+                                            siguiendo las directrices de la compañía y el Gerente General
+                                        </li>
+                                        <li> proceso presupuestario se realiza de forma anual y no existe seguimiento
+                                            periódico
+                                        </li>
+                                        <li> La asignación de recursos se realiza contemplando los objetivos
+                                            estratégicos de
+                                            la compañía establecido por el equipo responsable de construir el
+                                            presupuesto
+                                        </li>
+                                        <li> El presupuesto contempla varios escenarios posibles e incluye análisis de
+                                            riesgos
+                                        </li>
+                                        <li> Existe un formato padronizado en la organización establecido y completado
+                                            por
+                                            el equipo responsable de su construcción
+                                        </li>
+                                    </ul>
+                                </td>
+                                <td headers="basic-username">
+                                    <ul>
+                                        <li>La planificación presupuestaria es llevada a cabo por un equipo responsable
+                                            en
+                                            la organización de forma coordinada con la participación de todas las áreas
+                                            siguiendo las directrices de la compañía y el Gerente General
+                                        </li>
+                                        <li>El proceso presupuestario se realiza de forma anual pudiendo realizarse
+                                            ajustes
+                                            en caso que se a necesario y posee un seguimiento mensual por parte del
+                                            equipo
+                                            responsable.
+                                        </li>
+                                        <li>La asignación de recursos se realiza contemplando los objetivos estratégicos
+                                            de
+                                            la compañía con la participación activa de cada responsable de área pudiendo
+                                            existir responsabilidades comunes en varias áreas
+                                        </li>
+                                        <li>Contempla análisis de sensibilidad en sus resultados y niveles de tolerancia
+                                            al
+                                            riesgo existiendo la posibilidad de reasignan recursos en caso que los
+                                            supuestos
+                                            de construcción del presupuesto se alteren
+                                        </li>
+                                        <li>Existe un formato padronizado establecido por el equipo responsable y
+                                            completado
+                                            por cada área
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td headers="basic-number"> Cultura Innovadora</td>
+                                <td headers="basic-fname" style="background: #FBE5D6">
+                                    <ul>
+                                        <li>Existe un equipo propio dedicado a realizar innovación principalmente
+                                            enfocada a la actividad comercial
+                                        </li>
+                                        <li>La innovación es propuesta por el propio equipo dedicado.</li>
+                                        <li>Se realizan análisis de las tendencias comerciales innovadores en el mercado
+                                            para proporcionar ideas comerciales innovadoras a la organización existiendo
+                                            metas e indicadores asociados al volumen de productos innovadores
+                                        </li>
+                                        <li>No existe orientación interna a la innovación asociada a la forma interna de
+                                            interactuación, dinámica de trabajo, procesos y simplificación operativa,
+                                            entre otros.
+                                        </li>
+                                    </ul>
+                                </td>
+                                <td headers="basic-lname">
+                                    <ul>
+                                        <li>Existe un equipo propio dedicado a realizar innovación enfocada a cualquier
+                                            ámbito de la organización.
+                                        </li>
+                                        <li>La innovación puede ser propuesta por cualquier persona en la organización y
+                                            es
+                                            canalizada por el equipo de gestión dedicado.
+                                        </li>
+                                        <li>Existen cursos de formación en innovación a todos los niveles de la
+                                            organización
+                                            y a todas áreas de forma anual.
+                                        </li>
+                                        <li>Existen metas de innovación aunque no están incluidas en el sistema de
+                                            desempeño
+                                            de la organización
+                                        </li>
+                                    </ul>
+                                </td>
+                                <td headers="basic-username">
+                                    <ul>
+                                        <li>La innovación forma parte de la cultura interna de la organización
+                                            produciéndose
+                                            internamente en cada área sin necesidad de tener un equipo dedicado para
+                                            ello.
+                                        </li>
+                                        <li>La innovación puede ser propuesta por cualquier persona en la organización y
+                                            es
+                                            canalizada por cada área
+                                        </li>
+                                        <li>Existen cursos de formación en innovación a todos los niveles de la
+                                            organización
+                                            y a todas áreas de forma periódica integrados la plan individual de carrera
+                                        </li>
+                                        <li>La organización premia las ideas innovadores ocurridas en cualquier ámbito
+                                            de la
+                                            organización afectando al sistema de desempeño
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td headers="basic-number"> Canales de Distribución</td>
+                                <td headers="basic-fname">
+                                    <ul>
+                                        <li>Existe una estrategia de distribución de canales gestionada de forma
+                                            separada, y la generación de información no está integrada.
+                                        </li>
+                                        <li>El desarrollo de la estrategia es informal y no está documentado.</li>
+                                        <li>No existe una oferta definida para canales digitales, concentrándose
+                                            únicamente en canales tradicionales.
+                                        </li>
+                                        <li>La introducción de nuevos canales se realiza de forma reactiva, sin
+                                            considerar su aplicabilidad a la industria, marca y segmentos de clientes.
+                                        </li>
+                                    </ul>
+                                </td>
+                                <td headers="basic-lname" style="background: #FBE5D6">
+                                    <ul>
+                                        <li>Existe un equipo propio dedicado a realizar innovación enfocada a cualquier
+                                            ámbito de la organización.
+                                        </li>
+                                        <li>La innovación puede ser propuesta por cualquier persona en la organización y
+                                            es
+                                            canalizada por el equipo de gestión dedicado.
+                                        </li>
+                                        <li>Existen cursos de formación en innovación a todos los niveles de la
+                                            organización
+                                            y a todas áreas de forma anual.
+                                        </li>
+                                        <li>Existen metas de innovación aunque no están incluidas en el sistema de
+                                            desempeño
+                                            de la organización
+                                        </li>
+                                    </ul>
+                                </td>
+                                <td headers="basic-username">
+                                    <ul>
+                                        <li>Existe una estrategia de distribución omnicanal, cuya información esta
+                                            integrada
+                                            y permite identificar cada interacción del cliente con los distintos
+                                            canales.
+                                        </li>
+                                        <li>Existe un proceso formal para la definición de la estrategia, la cual está
+                                            documentada, y se actualiza de forma anual
+                                        </li>
+                                        <li>Existe una oferta definida para canales digitales, en donde los clientes
+                                            reciben
+                                            incentivos para utilizar dicho canales
+                                        </li>
+                                        <li>La introducción de nuevos canales considera la información y funciones más
+                                            apropiadas, con innovaciones especificas.
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td headers="basic-number">Canales Transaccionales</td>
+                                <td headers="basic-fname">
+                                    <ul>
+                                        <li>La definición de la estrategia de canales presenciales y no presenciales no
+                                            está centralizada, participando más de un equipo en su definición.
+                                        </li>
+                                        <li>No existe integración entre los procesos de los canales presenciales y los
+                                            no presenciales. Se realiza una evaluación del desempeño anual, pero sin
+                                            objetivos y KPIs definidos previamente.
+                                        </li>
+                                        <li>Existe una plataforma multi canal para aquellos que son presenciales.</li>
+
+                                    </ul>
+                                </td>
+                                <td headers="basic-lname" style="background: #FBE5D6">
+                                    <ul>
+                                        <li>El modelo de gobierno es definido de acuerdo a macro segmentos de clientes,
+                                            por
+                                            lo tanto para canales presenciales como no presenciales hay solo un
+                                            responsable
+                                            por segmento. Existen instancias para compartir conocimientos entre los
+                                            responsables de cada segmento.
+                                        </li>
+                                        <li>Existen procesos específicos por segmentos, donde se establecen metas
+                                            anuales,
+                                            mediciones y evaluaciones de desempeño a nivel canal en cada segmento.
+                                        </li>
+                                        <li>Existen plataformas comunes que soportan todos los tipos de canales. Se
+                                            tiene
+                                            una vista consolidada de todas las interacciones que ha tenido el consumidor
+                                            a
+                                            lo largo de todos los canales existentes.
+                                        </li>
+                                    </ul>
+                                </td>
+                                <td headers="basic-username">
+                                    <ul>
+                                        <li>El modelo de gobierno es definido a nivel corporativo, existiendo solo un
+                                            responsable para los canales presenciales y no presenciales. Existe
+                                            alineamiento
+                                            entre canales y segmentos para ofrecer una experiencia de cliente superior
+                                        </li>
+                                        <li>Los procesos para todos los canales son definidos a nivel corporativo. Los
+                                            principales procesos de negocio pueden ser ejecutados a través de todos los
+                                            canales, lo cual permite al consumidor empezar un proceso en un canal y
+                                            terminar
+                                            en otro.
+                                        </li>
+                                        <li>Existe una plataforma a nivel corporativo que integra todos los canales,
+                                            utilizando reglas y herramientas de gestión. Se tiene una única fuente de
+                                            datos
+                                            para todas las interacciones entre consumidores.
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td headers="basic-number">Gestión de Canales</td>
+                                <td headers="basic-fname">
+                                    <ul>
+                                        <li>Existe un responsable designado en monitorear el desempeño de todos los
+                                            canales.
+                                        </li>
+                                        <li>La respuesta a los cambios en la demanda es reactiva, y requiere el apoyo de
+                                            staff temporal. El proceso y la tecnología usada para examinar las
+                                            capacidades a lo largo de los canales es manual.
+                                        </li>
+                                        <li>Los reportes se realizan manualmente integrando datos de varias fuentes de
+                                            información.
+                                        </li>
+                                        <li>No existe personal capacitado para analizar la eficiencia y efectividad de
+                                            la información del rendimiento del canal.
+                                        </li>
+
+                                    </ul>
+                                </td>
+                                <td headers="basic-lname" style="background: #FBE5D6">
+                                    <ul>
+                                        <li>Existe una unidad responsable en monitorear el desempeño de todos los
+                                            canales,
+                                            quien analiza los niveles óptimos y costos de operación.
+                                        </li>
+                                        <li>El proceso y la tecnología utilizada para analizar la capacidad de los
+                                            canales
+                                            está alineada con la oferta existente.
+                                        </li>
+                                        <li>Se monitorean los canales diariamente con el apoyo de herramientas de
+                                            reportes
+                                            estándar.
+                                        </li>
+                                        <li>El personal encargado está capacitado para analizar la eficiencia y
+                                            efectividad
+                                            de la información del rendimiento del canal.
+                                        </li>
+                                    </ul>
+                                </td>
+                                <td headers="basic-username">
+                                    <ul>
+                                        <li>Existe una unidad responsable en monitorear la capacidad a lo largo de los
+                                            diferentes canales. Brinda asesoramiento y análisis de métricas de
+                                            desempeño.
+                                        </li>
+                                        <li>Existen procesos automatizados que monitorean la capacidad del canal que
+                                            pueden
+                                            asignar servicios entre los diferentes canales.
+                                        </li>
+                                        <li>Se monitorean los canales en tiempo real, utilizando distintas herramientas
+                                            de
+                                            control que son posible de acceder en forma online a través de un portal
+                                            interno.
+                                        </li>
+                                        <li>El personal encargado de monitorear los canales esta capacitado para
+                                            analizar y
+                                            comprender los KPIs de cada canal y reportar avances al resto de la
+                                            organización.
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td headers="basic-number">Planeación de venta</td>
+                                <td headers="basic-fname">
+                                    <ul>
+                                        <li>Existe un responsable designado en monitorear el desempeño de todos los
+                                            canales.
+                                        </li>
+                                        <li>La respuesta a los cambios en la demanda es reactiva, y requiere el apoyo de
+                                            staff temporal. El proceso y la tecnología usada para examinar las
+                                            capacidades a lo largo de los canales es manual.
+                                        </li>
+                                        <li>Los reportes se realizan manualmente integrando datos de varias fuentes de
+                                            información.
+                                        </li>
+                                        <li>No existe personal capacitado para analizar la eficiencia y efectividad de
+                                            la información del rendimiento del canal.
+                                        </li>
+
+                                    </ul>
+                                </td>
+                                <td headers="basic-lname" style="background: #FBE5D6">
+                                    <ul>
+                                        <li>Existe una unidad responsable en monitorear el desempeño de todos los
+                                            canales,
+                                            quien analiza los niveles óptimos y costos de operación.
+                                        </li>
+                                        <li>El proceso y la tecnología utilizada para analizar la capacidad de los
+                                            canales
+                                            está alineada con la oferta existente.
+                                        </li>
+                                        <li>Se monitorean los canales diariamente con el apoyo de herramientas de
+                                            reportes
+                                            estándar.
+                                        </li>
+                                        <li>El personal encargado está capacitado para analizar la eficiencia y
+                                            efectividad
+                                            de la información del rendimiento del canal.
+                                        </li>
+                                    </ul>
+                                </td>
+                                <td headers="basic-username">
+                                    <ul>
+                                        <li>Existe una unidad responsable en monitorear la capacidad a lo largo de los
+                                            diferentes canales. Brinda asesoramiento y análisis de métricas de
+                                            desempeño.
+                                        </li>
+                                        <li>Existen procesos automatizados que monitorean la capacidad del canal que
+                                            pueden
+                                            asignar servicios entre los diferentes canales.
+                                        </li>
+                                        <li>Se monitorean los canales en tiempo real, utilizando distintas herramientas
+                                            de
+                                            control que son posible de acceder en forma online a través de un portal
+                                            interno.
+                                        </li>
+                                        <li>El personal encargado de monitorear los canales esta capacitado para
+                                            analizar y
+                                            comprender los KPIs de cada canal y reportar avances al resto de la
+                                            organización.
+                                        </li>
+                                    </ul>
+                                </td>
+
+                            </tr>
+                            <tr>
+                                <td headers="basic-number"> Ejecución de Venta</td>
+                                <td headers="basic-fname">
+                                    <ul>
+                                        <li>Existe poca visibilidad de parte de la fuerza comercial hacia el presupuesto de ventas, transacciones, afiliaciones y cobertura.</li>
+                                        <li>La tecnología utilizada para gestionar el presupuesto de ventas son hojas de cálculo y reportes de ventas.</li>
+                                        <li>Se definen premios por productividad y desempeño que únicamente se basan en objetivos individuales de la fuerza comercial.</li>
+                                        <li>Existen herramientas simples para la optimización de la fuerza comercial, hojas de cálculo, y  catálogos de productos.</li>
+                                    </ul>
+                                </td>
+                                <td headers="basic-lname" style="background: #FBE5D6">
+                                    <ul>
+                                        <li>Existe visibilidad completa de la fuerza comercial de todo el presupuesto de ventas, pero requiere de cierta integración entre las bases.</li>
+                                        <li>Se maneja un tablero de control de indicadores que muestra las oportunidades del área comercial y diversos resúmenes del progreso de la ejecución comercial.</li>
+                                        <li>Se definen premios por productividad y desempeño que se basan en objetivos individuales y por equipo, el cual consideran como medidas claves el desempeño de la facturación de ventas y su volumen.</li>
+                                        <li>Existen bases de datos con perfiles de la fuerza de ventas que tienen información de su desempeño histórico con diferentes aperturas.  Contienen datos históricos, registro de contactos y actividades planeadas para contactar a los clientes.</li>
+
+                                    </ul>
+                                </td>
+                                <td headers="basic-username">
+                                    <ul>
+                                        <li>Existe visibilidad en tiempo real de la fuerza comercial de todo el presupuesto de ventas con integración entre las diferentes bases.</li>
+                                        <li>Se maneja un tablero de control que proactivamente identifica aquellos gaps en la gestión comercial.</li>
+                                        <li>Existe una cultura de ventas basada en las oportunidades del negocio y su lineamiento estratégico. Para soportar esa cultura se enfatiza en entrenamientos y comunicación continua.</li>
+                                        <li>Existe una única vista del perfil de la fuerza de ventas con registros de su desempeño histórico. Hay un set completo de herramientas de optimización de fuerza de ventas (ej: evaluación y eficiencia de la carga de trabajo en terreno) con un alto grado alto de automatización.</li>
+
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td headers="basic-number">Gestión de Contratos</td>
+                                <td headers="basic-fname">
+                                    <ul>
+                                        <li>El equipo de venta y soporte cuenta con las habilidades para negociar y capturar la venta de la mayoría de los productos de la empresa.</li>
+                                        <li>Se reciben requisitos de modificación y término del contrato de manera electrónica para gestionar el proceso con el cliente.</li>
+                                        <li>Existen reglas predefinidas que estandarizan la gestión de contratos, aunque la mayoría de los requerimientos son tratados como excepciones, provocando actividades manuales.</li>
+                                        <li>Se cuenta con distintas plataformas de gestión que permite ingresar la información de captura de venta, modificación y término de contrato.</li>
+                                    </ul>
+                                </td>
+                                <td headers="basic-lname" style="background: #FBE5D6">
+                                    <ul>
+                                        <li>El equipo de venta y soporte cuenta con las habilidades para negociar y capturar la venta de todos los productos de la empresa.</li>
+                                        <li>Algunos requerimientos pueden completarse en tiempo real, si es que se cumple con los requisitos.</li>
+                                        <li>Los procesos de venta están altamente estandarizados y automátizados, soportados por información electrónica, que permite reutilizar y automatizar el proceso.</li>
+                                        <li>Se cuenta con una plataforma multi-producto y multi-segmento, con soporte y ayuda para validar que se cumplan las condiciones de los requerimientos.</li>
+                                    </ul>
+                                </td>
+                                <td headers="basic-username">
+                                    <ul>
+                                        <li>El equipo está capacitado para negociar y capturar multiproductos y multisegmentos. Se realizan entrenamientos para retener a los clientes y renegociar las mejores condiciones para ambas partes.</li>
+                                        <li>La mayoría de los requerimientos de modificaciones y término de contrato se realizan en tiempo real. Existen especialistas que gestionan las excepciones.</li>
+                                        <li>Existe un único proceso para la negociación y captura de la venta la cual reutiliza la mayoría de la información del cliente, que se mantiene actualizada en carpetas electrónicas. El cliente puede realizar el seguimiento a su requerimiento a través de su portal de administración.</li>
+                                        <li>Se cuenta con una plataforma integrada a sistemas de soporte que recibe estadísticas de comportamiento para anticipar requerimientos ante posibles término de contratos.</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td headers="basic-number">Experiencia de Clientes</td>
+                                <td headers="basic-fname">
+                                    <ul>
+                                        <li>Existe un equipo responsable capaz de analizar el feedback del cliente, pero tiene limitadas habilidades para traducirlo en principios de diseño.</li>
+                                        <li>Existe un modelo con procesos y planillas estandarizadas para realizar casos de uso. Se involucra al cliente únicamente en la etapa de investigación de mercado.</li>
+                                        <li>Existen aplicaciones digitales que soportan todo el proceso de diseño de experiencia de cliente.</li>
+                                        <li>La generación de reportes proviene de múltiples fuentes y  está se extrae de forma manual.</li>
+
+                                    </ul>
+                                </td>
+                                <td headers="basic-lname" style="background: #FBE5D6">
+                                    <ul>
+                                        <li>Existe una unidad especializada y responsable del diseño de la experiencia de clientes y el desarrollo de los casos de uso.</li>
+                                        <li>El cliente es involucrado en el proceso de desarrollo de experiencia a través de un enfoque de “prueba y aprendizaje”, permitiendo identificar potenciales beneficios comerciales.</li>
+                                        <li>Las aplicaciones digitales se utilizan constantemente y están integradas a algunos procesos de negocio. Se cuenta con un repositorio de customer journeys que permite realizar simulaciones de su implementación.</li>
+                                        <li>La generación de reportes proviene de múltiples fuentes y  está parcialmente automatizada.</li>
+
+                                    </ul>
+                                </td>
+                                <td headers="basic-username">
+                                    <ul>
+                                        <li>Existe una unidad está encargada de capturar, analizar y distribuir la información relevante sobre el comportamiento del cliente.</li>
+                                        <li>El seguimiento de beneficios se realiza constantemente para identificar la eficacia de los customer journeys. Existe un laboratorio de experiencia de clientes que permite diseñar y simular distintas estrategias de marketing tradicional y digital, involucrando al cliente en todas las etapas que sean necesarias.</li>
+                                        <li>Las aplicaciones digitales se utilizan para simular la estrategia en el laboratorio de experiencia. Se cuenta con herramientas de encuestas de satisfacción integradas en distintos canales.</li>
+                                        <li>Existen tableros de comando que contienen KPIs de rendimiento alineados con las metas de negocio y se extraen de forma automatizada.</li>
+                                    </ul>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td headers="basic-number">Investigación e Innovación</td>
+                                <td headers="basic-fname">
+                                    <ul>
+                                        <li>Existe un responsable para el proceso de ideación e innovación que coordina los equipos de marketing, product managers y líderes de segmento. La investigación e innovación se concentra solo en algunas líneas de producto.</li>
+                                        <li>Existe un proceso de innovación el cual está definido a alto nivel, enfocado en la innovación incremental. Las tendencias se documentan aisladamente, las ideas se enfocan en productos y clientes estratégicos.</li>
+                                        <li>No existen indicadores que monitoreen el proceso de ideación e innovación.</li>
+                                        <li>Se cuenta con un portal que permite capturar y gestionar las ideas de productos, se utilizan herramientas y metodologías básicas para la gestión de innovación.</li>
+
+                                    </ul>
+                                </td>
+                                <td headers="basic-lname" style="background: #FBE5D6">
+                                    <ul>
+                                        <li>Existe un responsable para el proceso de ideación e innovación que se apoya en expertos de la industria, quienes identifican y analizan el comportamiento del cliente.</li>
+                                        <li>Se realizan sesiones de innovación de manera periódica, involucrando a equipos internos y clientes. El proceso busca entregar innovaciones incrementales y disruptivas.</li>
+                                        <li>Se establecen KPIs para poder asegurar el desempeño del proceso, pero se extraen de diferentes fuentes y de forma manual.</li>
+                                        <li>Se cuenta con una herramienta que permite capturar, administrar y dar seguimiento al proceso de ideación.</li>
+
+                                    </ul>
+                                </td>
+                                <td headers="basic-username">
+                                    <ul>
+                                        <li>Existe una unidad responsable de identificar tendencias, desarrollar nuevas ideas y mantener una red de expertos respecto a la ideación e innovación.</li>
+                                        <li>El proceso de ideación prioriza la ideas en base a parámetros conocidos por la empresa, que están alineados con la estrategia. Existen hitos de control para evaluar el “Go / No Go” de las ideas.</li>
+                                        <li>Se establecen KPIs para poder asegurar el desempeño del proceso, se extraen de diferentes fuentes y pero de forma automatizada y periódica.</li>
+                                        <li>Existe una herramienta que permite dar soportar al proceso end-to-end, gestionando las etapas y realizando reportes de avance. Está integrada con redes sociales para obtener feedback externo. Permite generar escenarios de prueba de la idea, con ayuda de datos y modelos analíticos.</li>
+
+                                    </ul>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td headers="basic-number">Gestión de Segmentos</td>
+                                <td headers="basic-fname">
+                                    <ul>
+                                        <li>Existe una unidad de negocios organizada por producto, y la segmentación es definida por los equipos de productos.</li>
+                                        <li>Las ofertas de nuevos productos se deciden centralizadamente y basados en ventas de los productos actuales. No se consideran las actualizaciones a los parámetros que definen cada segmento de cliente ni sus necesidades.</li>
+                                        <li>Existe una herramienta que permite una vista transversal a los segmentos y productos de la compañía.</li>
+
+                                    </ul>
+                                </td>
+                                <td headers="basic-lname" style="background: #FBE5D6">
+                                    <ul>
+                                        <li>Existe una unidad de negocios organizada por segmentos, aunque su gestión financiera está alineada por productos.</li>
+                                        <li>La segmentación es detallada, considerando las necesidades del cliente y sus preferencias, realizando ofertas y promociones diferenciadas por segmento.</li>
+                                        <li>Está implementada una arquitectura orientada a analytics para simular clasificaciones y segmentaciones de clientes. Se cuenta con herramientas digitales para el diseño y simulación de campañas.</li>
+
+                                    </ul>
+                                </td>
+                                <td headers="basic-username">
+                                    <ul>
+                                        <li>Existe una unidad de negocios organizada por segmentos, y alineada con la gestión financiera.</li>
+                                        <li>La segmentación evoluciona con el desarrollo de agrupaciones de clusters, basadas en comportamientos, valor del cliente, tipo de comercio, transacciones, entre otros. Es posible atender a cada cliente con una oferta personalizada.</li>
+                                        <li>Existe una arquitectura que soporta desde el desarrollo de modelos analíticos hasta la implementación de campañas de comunicación. La herramienta permite diseñar casos de uso para evaluar la definición de segmentos.</li>
+
+                                    </ul>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td headers="basic-number">Gestión del ciclo de vida del Producto</td>
+                                <td headers="basic-fname">
+                                    <ul>
+                                        <li>La gestión del ciclo de vida del producto es manejada por los distintos responsables de cada producto.</li>
+                                        <li>Existe un monitoreo del ciclo de vida el cual considera principalmente indicadores de volumen de ventas.</li>
+                                        <li>Los productos se retiran una vez que dejan de ser rentables, pero no existe un proceso definido para el retiro masivo de productos obsoletos.</li>
+                                        <li>Se soporta la gestión y monitoreo del ciclo de vida del producto utilizando planillas estandarizadas y reportes manuales.</li>
+
+                                    </ul>
+                                </td>
+                                <td headers="basic-lname" style="background: #FBE5D6">
+                                    <ul>
+                                        <li>Existe una unidad establecida que es responsable por la gestión del ciclo de vida del producto que evalúa su rendimiento periódicamente.</li>
+                                        <li>Se monitorea el ciclo de vida del producto en términos de valor de marca y crecimiento de la categoría. Existen procesos activos de monitoreo a lo largo de todo el ciclo de vida.</li>
+                                        <li>Existe un proceso de retiro de productos obsoletos, pero no garantiza que el retiro sea coordinado en todos los comercios.</li>
+                                        <li>Se cuenta con distintas herramienta para gestionar cada etapa del ciclo de vida del producto, sin embargo éstas no están integradas entre sí.</li>
+                                    </ul>
+                                </td>
+                                <td headers="basic-username">
+                                    <ul>
+                                        <li>Existe una unidad que posee una clara distinción entre el desarrollo y la gestión de productos. La unidad se encarga de mejorar el portafolio de productos.</li>
+                                        <li>Se monitorea el ciclo de vida del producto en términos de la satisfacción del cliente, rentabilidad y fuga del producto, en donde existe un proceso de monitoreo proactivo a lo largo de su ciclo de vida, basados en los cambios de las necesidades del consumidor y del mercado.</li>
+                                        <li>Se garantiza el retiro eficiente de los productos en todos los comercios de forma de reducir costos.</li>
+                                        <li>Existe una herramienta de gestión integrada que monitorea el ciclo de vida end-to-end del producto. Se generan reportes automatizados que facilitan el análisis de los distintos indicadores de seguimiento</li>
+
+                                    </ul>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td headers="basic-number">Autenticación</td>
+                                <td headers="basic-fname">
+                                    <ul>
+                                        <li>Existe un equipo con conocimiento de configuración de las funciones principales de los sistemas</li>
+                                        <li>Se cuenta con tecnología y procesos diseñados para soportar algunos modelos de pago.</li>
+                                        <li>Los formatos de pagos están estandarizados, reduciendo la complejidad de integración de pagos.</li>
+                                        <li>Se realizan decisiones en tiempo real para declinar pagos por tipos de fraudes básicos.</li>
+
+
+                                    </ul>
+                                </td>
+                                <td headers="basic-lname" style="background: #FBE5D6">
+                                    <ul>
+                                        <li>Existe un equipo con conocimiento avanzado de configuración de los sistemas, utilizando funciones específicas.</li>
+                                        <li>La mayoría de los modelos de pago son aceptados (Visa, MasaterCard, e-payments, doméstico e internacional).</li>
+                                        <li>El formato de datos comunes para pagos permite la integración con nuevos modelos de pago.</li>
+                                        <li>Las decisiones en tiempo real permiten realizar excepciones dinámicas, ajustes a los parámetros de decisión de autenticación y validación.</li>
+                                    </ul>
+                                </td>
+                                <td headers="basic-username">
+                                    <ul>
+                                        <li>Existe un equipo con conocimiento total de los componentes de negocio y técnicos de los sistemas.</li>
+                                        <li>Todos los modelos de pago son aceptados, integrados con pagos digitales y emergentes.</li>
+                                        <li>Se tiene capacidad de transformar múltiples modelos de datos a un modelo canónico de datos para un procesamiento central en un motor de pagos.</li>
+                                        <li>Las decisiones en tiempo real consideran el riesgo materializado y probabilidad de ocurrencia de eventos.</li>
+
+
+                                    </ul>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td headers="basic-number">Switch</td>
+                                <td headers="basic-fname">
+                                    <ul>
+                                        <li>Existe un equipo capaz de configurar únicamente los módulos principales del sistema.</li>
+                                        <li>El proceso de switch es automatizado, con intervención manual solamente en casos excepcionales.</li>
+                                        <li>Se utiliza tecnología escalable para procesar aumentos del volumen de transacciones, aunque la velocidad es comprometida.</li>
+
+                                    </ul>
+                                </td>
+                                <td headers="basic-lname" style="background: #FBE5D6">
+                                    <ul>
+                                        <li>Existe un equipo experto y capaz de configurar el sistema para habilitar las necesidades del negocio.</li>
+                                        <li>El proceso de switch es totalmente automatizado, con intervención especial cuando las reglas de negocios automáticas no pueden resolver los casos de excepción.</li>
+                                        <li>La tecnología es totalmente escalable para procesar aumentos del volumen de transacciones, manteniendo los SLAs de velocidad de procesamiento.</li>
+
+                                    </ul>
+                                </td>
+                                <td headers="basic-username">
+                                    <ul>
+                                        <li>Existe un equipo de procesamiento que participa en las definiciones de requerimientos de negocio para asegurar una configuración y personalización del sistema apropiada.</li>
+                                        <li>El procesamiento de switch es automático, con intervención manual en situaciones de emergencia.</li>
+                                        <li>La tecnología es dinámicamente escalable para procesar incrementos del volumen de transacciones, mientras maximiza la eficiencia y mantiene la velocidad de procesamiento.</li>
+
+                                    </ul>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td headers="basic-number">Compensación y liquidación</td>
+                                <td headers="basic-fname">
+                                    <ul>
+                                        <li>Existe un equipo con conocimientos básicos de mecanismos de compensación, pero pueden implementarlos con ayuda de entrenamiento.</li>
+                                        <li>Las validaciones en la Compensación y Liquidación es automatizada, con algunas intervenciones manuales en casos de excepción.</li>
+                                        <li>El proceso de recuperación es automático, aunque la conciliación es manual.</li>
+
+                                    </ul>
+                                </td>
+                                <td headers="basic-lname" style="background: #FBE5D6">
+                                    <ul>
+                                        <li>Existe un equipo con conocimientos avanzados de múltiples mecanismos de compensación y puede rápidamente implementarlos.</li>
+                                        <li>Las validaciones en la Compensación y Liquidación es totalmente automatizada, realizada diariamente.</li>
+                                        <li>El proceso de recuperación de pagos es totalmente automático.</li>
+
+                                    </ul>
+                                </td>
+                                <td headers="basic-username">
+                                    <ul>
+                                        <li>Existe una unidad de procesos de compensación centralizada para todo tipo de transacciones.</li>
+                                        <li>El intercambio de archivos y el procesamiento es automatizado. La compensación es realizada periódicamente durante el día y en tiempo real para transacciones específicas.</li>
+                                        <li>El proceso de recuperación de pagos es totalmente automático y en tiempo real.</li>
+
+                                    </ul>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td headers="basic-number">Abono y concilación</td>
+                                <td headers="basic-fname">
+                                    <ul>
+                                        <li>Existe un equipo entrenado en metodologías de calidad de datos y en el cumplimiento de las reglas de validación.</li>
+                                        <li>Existe un conocimiento básico en el uso de herramientas de apoyo al proceso de conciliación, no está definido un responsable en mantener actualizados los motores de reglas y cuadratura.</li>
+                                        <li>La actividad de conciliación es diaria, pero no cuenta con procesos de validación automatizados. Las reglas no detallan cómo resolver descuadres de dificultad avanzada.</li>
+                                        <li>Las herramientas generan reportes automatizados, aunque deben ser complementados con tareas manuales.</li>
+
+                                    </ul>
+                                </td>
+                                <td headers="basic-lname" style="background: #FBE5D6">
+                                    <ul>
+                                        <li>Existe un equipo con amplio conocimiento sobre la calidad de datos y cumplimiento de reglas de validación.</li>
+                                        <li>El equipo cuenta con la experiencia para utilizar herramientas especializadas para el proceso de conciliación. Hay un equipo dedicado en mantener las regla de validación y cuadratura.</li>
+                                        <li>La actividad de conciliación es diaria, y se utilizan mejores prácticas para consolidar toda la información antes de realizar los ejercicios de validación. Están diseñados los procesos automatizados para validar los datos.</li>
+                                        <li>Las herramientas generan reportes automatizados personalizables. Cuentan con desarrollos que permiten determinar posibles causas de discrepancias, ofreciendo acciones a seguir.</li>
+
+
+                                    </ul>
+                                </td>
+                                <td headers="basic-username">
+                                    <ul>
+                                        <li>Existe un dueño del proceso de conciliación encargado de coordinar end-to-end el flujo de datos y mejorar la validación de entrada de datos.</li>
+                                        <li>El equipo se entrena periódicamente para utilizar de mejor manera las herramientas de apoyo a la conciliación.</li>
+                                        <li>La actividad de conciliación es diaria, y además es posible generar reportes en tiempo real. Los procesos de validación diseñados obtienen un alto nivel de cuadre.</li>
+                                        <li>Se utilizan plataformas de reglas de negocio como apoyo a la validación de datos. Se cuenta con una gran cantidad de reglas de negocio, mejorando la escalabilidad del flujo y tipo de datos.</li>
+
+
+                                    </ul>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td headers="basic-number">Monitoreo de Fraude</td>
+                                <td headers="basic-fname">
+                                    <ul>
+                                        <li>Existe un equipo responsable que ejecuta todas las tareas relacionadas a la gestión de fraude.</li>
+                                        <li>Se utilizan modelos predictivos para detectar posibles fraudes. No se cuenta con la habilidad de tomar decisiones en tiempo real.</li>
+                                        <li>Se cuenta con un plan de análisis de aplicaciones para detectar vulnerabilidades, aunque no se cuenta con una visión integrada en tiempo real de la seguridad de los sistemas.</li>
+                                        <li>Se captura la data para realizar seguimiento a los KPIs definidos, aunque se realiza de manera manual.</li>
+
+                                    </ul>
+                                </td>
+                                <td headers="basic-lname">
+                                    <ul>
+                                        <li>Existe un equipo con amplio conocimiento sobre la calidad de datos y cumplimiento de reglas de validación.</li>
+                                        <li>El equipo cuenta con la experiencia para utilizar herramientas especializadas para el proceso de conciliación. Hay un equipo dedicado en mantener las regla de validación y cuadratura.</li>
+                                        <li>La actividad de conciliación es diaria, y se utilizan mejores prácticas para consolidar toda la información antes de realizar los ejercicios de validación. Están diseñados los procesos automatizados para validar los datos.</li>
+                                        <li>Las herramientas generan reportes automatizados personalizables. Cuentan con desarrollos que permiten determinar posibles causas de discrepancias, ofreciendo acciones a seguir.</li>
+
+
+                                    </ul>
+                                </td>
+                                <td headers="basic-username" style="background: #FBE5D6">
+                                    <ul>
+                                        <li>Existe un equipo responsable que ejecuta todas las tareas relacionadas a la gestión de fraude , además de realizar investigaciones para casos especiales, con el entrenamiento apropiado, autonomía y autoridad para llevar las investigaciones.</li>
+                                        <li>Se realiza un monitoreo de forma rigurosa y periódicamente. Los resultados son compartidos con la gerencia y retroalimentan el modelo. El proceso de validación del modelo es independiente a su desarrollo e implementación.</li>
+                                        <li>Se  cuenta con sistemas de apoyo para detectar y eliminar software malicioso que pueda comprometer las redes y canales.</li>
+                                        <li>Los KPIs son acordados con la gerencia, monitoreados automáticamente, y compartidos al resto de las áreas participantes de los procesos.</li>
+
+                                    </ul>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td headers="basic-number">Servicio al cliente</td>
+                                <td headers="basic-fname">
+                                    <ul>
+                                        <li>Existe un equipo capacitado para responder algunas consultas/solicitudes/reclamos, derivando al cliente al área respectiva cuando sea necesario.</li>
+                                        <li>No queda registro del historial del cliente.
+                                        <li>No se realizan encuestas para medir la satisfacción del cliente.</li>
+                                        <li>El proceso está orientado a responder al cliente de la forma más rápida posible para luego atender al próximo cliente.</li>
+                                        <li>El personal cuenta con apoyo de guías online para atender las consultas/solicitudes/reclamos generales hechas por los clientes, contando con una lista de consultas más comunes para responder.</li>
+
+                                    </ul>
+                                </td>
+                                <td headers="basic-lname" style="background: #FBE5D6">
+                                    <ul>
+                                        <li>Existe un equipo capacitado para responder una mayor variedad de consultas/solicitudes/reclamos, derivando solamente aquellas más complejas a especialistas.</li>
+                                        <li>Se registra el historial del cliente en un sistema, donde las mismas se clasifican, la información requiere de extracción manual y no es online.</li>
+                                        <li>Se realizan encuestas esporádicamente para medir la satisfacción del cliente.</li>
+                                        <li>El proceso general es diseñado para proveer información a la solicitud de manera eficiente y utilizar canales alternativos para disponer de la misma información.</li>
+                                        <li>El personal cuenta con una plataforma de servicio el cual permite el registro de identificación de manera simple para el cliente.</li>
+
+                                    </ul>
+                                </td>
+                                <td headers="basic-username" >
+                                    <ul>
+                                        <li>Existe un equipo capacitado para responder todo tipo de consultas/solicitudes/reclamos, adecuándose al contexto y perfil del cliente.</li>
+                                        <li>Se registra el historial del cliente en un sistema, donde las mismas se clasifican, la información es automática y online.</li>
+                                        <li>Se realizan constantemente encuestas para medir la satisfacción del cliente.</li>
+                                        <li>El proceso general es diseñado para obtener información estructurada, de tal forma que los servicios se puedan extender a canales de menor costo para gestionar tales consultas/solicitudes/reclamos en el futuro.</li>
+                                        <li>El personal cuenta con una plataforma en donde se extraen listados de tipos de consultas/solicitudes/reclamos diariamente a través de todos los canales.</li>
+
+                                    </ul>
+                                </td>
+                            </tr>
+
+
+
+
+
+
+                            </tbody>
+
+                        </table>
+
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+</form>
+</body>
+</html>
