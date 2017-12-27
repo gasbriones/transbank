@@ -1,0 +1,865 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <!-- External dependencies -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-migrate/1.4.1/jquery-migrate.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/sinon.js/1.15.4/sinon.js"></script>
+    <script src="//unpkg.com/@atlassian/aui@7.1.1/dist/aui/js/aui.js"></script>
+    <script src="//unpkg.com/@atlassian/aui@7.1.1/dist/aui/js/aui-experimental.js"></script>
+    <script src="//unpkg.com/@atlassian/aui@7.1.1/dist/aui/js/aui-datepicker.js"></script>
+    <link rel="stylesheet" type="text/css" href="//unpkg.com/@atlassian/aui@7.1.1/dist/aui/css/aui.css"/>
+    <link rel="stylesheet" type="text/css" href="//unpkg.com/@atlassian/aui@7.1.1/dist/aui/css/aui-experimental.css"/>
+    <!-- / External dependencies -->
+
+
+</head>
+<body>
+<form class="aui">
+    <div class="aui-page-panel">
+        <div class="aui-page-panel-inner">
+            <section class="aui-page-panel-content">
+                <div class="aui-group">
+                    <div class="aui-item">
+                        <h5>3.0 CASO DE NEGOCIOS (UF)</h5>
+                        <br>
+                        <div class="aui-flatpack-example">
+                            <div class="aui-tabs horizontal-tabs"  role="application">
+                                <ul class="tabs-menu" role="tablist">
+                                    <li class="menu-item active-tab" role="presentation">
+                                        <a href="#tabs-1" role="tab" aria-selected="true">INGRESOS (UF)</a>
+                                    </li>
+                                    <li class="menu-item" role="presentation">
+                                        <a href="#tabs-2" role="tab" aria-selected="false">COSTOS (UF)</a>
+                                    </li>
+                                    <li class="menu-item" role="presentation">
+                                        <a href="#tabs-3" role="tab" aria-selected="false">GASTOS (UF)</a>
+                                    </li>
+                                </ul>
+                                <div class="tabs-pane active-pane" id="tabs-1" role="tabpanel" aria-hidden="false"
+                                     aria-labelledby="aui-uid-0">
+                                    <table class="aui">
+                                        <thead>
+                                        <tr>
+                                            <th width="310">CONCEPTO</th>
+                                            <th>AÑO 0</th>
+                                            <th>AÑO 1</th>
+                                            <th>AÑO 2</th>
+                                            <th>AÑO 3</th>
+                                            <th>AÑO 4</th>
+                                            <th>AÑO 5</th>
+                                        </tr>
+                                        <tr>
+                                            <th>INGRESOS (UF)</th>
+                                            <th><span class="aui-lozenge">UF 4.00</span></th>
+                                            <th><span class="aui-lozenge">UF 0.00</span></th>
+                                            <th><span class="aui-lozenge">UF 0.00</span></th>
+                                            <th><span class="aui-lozenge">UF 0.00</span></th>
+                                            <th><span class="aui-lozenge">UF 0.00</span></th>
+                                            <th><span class="aui-lozenge">UF 0.00</span></th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <td>COMISIONES</td>
+                                            <td><label><input type="text" value="1" /></label></td>
+                                            <td><label><input type="text" /></label></td>
+                                            <td><label><input type="text" /></label></td>
+                                            <td><label><input type="text" /></label></td>
+                                            <td><label><input type="text" /></label></td>
+                                            <td><label><input type="text" /></label></td>
+                                        </tr>
+                                        <tr>
+                                            <td>INGRESO POR TRANSACCIONES</td>
+                                            <td><label><input type="text" value="1"/></label></td>
+                                            <td><label><input type="text" /></label></td>
+                                            <td><label><input type="text" /></label></td>
+                                            <td><label><input type="text" /></label></td>
+                                            <td><label><input type="text" /></label></td>
+                                            <td><label><input type="text" /></label></td>
+                                        </tr>
+                                        <tr>
+                                            <td>INGRESO POR ARRIENDO POS</td>
+                                            <td><label><input type="text" value="1"/></label></td>
+                                            <td><label><input type="text" /></label></td>
+                                            <td><label><input type="text" /></label></td>
+                                            <td><label><input type="text" /></label></td>
+                                            <td><label><input type="text" /></label></td>
+                                            <td><label><input type="text" /></label></td>
+                                        </tr>
+                                        <tr>
+                                            <td>INGRESO NO RECURRENTE</td>
+                                            <td><label><input type="text" value="1"/></label></td>
+                                            <td><label><input type="text" /></label></td>
+                                            <td><label><input type="text" /></label></td>
+                                            <td><label><input type="text" /></label></td>
+                                            <td><label><input type="text" /></label></td>
+                                            <td><label><input type="text" /></label></td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>AHORRO EN COSTOS</td>
+                                            <td><label><input type="text" /></label></td>
+                                            <td><label><input type="text" /></label></td>
+                                            <td><label><input type="text" /></label></td>
+                                            <td><label><input type="text" /></label></td>
+                                            <td><label><input type="text" /></label></td>
+                                            <td><label><input type="text" /></label></td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>OTROS INGRESOS 1</td>
+                                            <td><label><input type="text" /></label></td>
+                                            <td><label><input type="text" /></label></td>
+                                            <td><label><input type="text" /></label></td>
+                                            <td><label><input type="text" /></label></td>
+                                            <td><label><input type="text" /></label></td>
+                                            <td><label><input type="text" /></label></td>
+                                        </tr>
+                                        <tr>
+                                            <td>OTROS INGRESOS 2</td>
+                                            <td><label><input type="text" /></label></td>
+                                            <td><label><input type="text" /></label></td>
+                                            <td><label><input type="text" /></label></td>
+                                            <td><label><input type="text" /></label></td>
+                                            <td><label><input type="text" /></label></td>
+                                            <td><label><input type="text" /></label></td>
+                                        </tr>
+                                        <tr>
+                                            <td>OTROS INGRESOS 3</td>
+                                            <td><label><input type="text" /></label></td>
+                                            <td><label><input type="text" /></label></td>
+                                            <td><label><input type="text" /></label></td>
+                                            <td><label><input type="text" /></label></td>
+                                            <td><label><input type="text" /></label></td>
+                                            <td><label><input type="text" /></label></td>
+                                        </tr>
+                                        <tr>
+                                            <td>OTROS INGRESOS 4</td>
+                                            <td><label><input type="text" /></label></td>
+                                            <td><label><input type="text" /></label></td>
+                                            <td><label><input type="text" /></label></td>
+                                            <td><label><input type="text" /></label></td>
+                                            <td><label><input type="text" /></label></td>
+                                            <td><label><input type="text" /></label></td>
+                                        </tr>
+                                        <tr>
+                                            <td>OTROS INGRESOS 5</td>
+                                            <td><label><input type="text" /></label></td>
+                                            <td><label><input type="text" /></label></td>
+                                            <td><label><input type="text" /></label></td>
+                                            <td><label><input type="text" /></label></td>
+                                            <td><label><input type="text" /></label></td>
+                                            <td><label><input type="text" /></label></td>
+                                        </tr>
+                                        <tr>
+                                            <td>OTROS INGRESOS 6</td>
+                                            <td><label><input type="text" /></label></td>
+                                            <td><label><input type="text" /></label></td>
+                                            <td><label><input type="text" /></label></td>
+                                            <td><label><input type="text" /></label></td>
+                                            <td><label><input type="text" /></label></td>
+                                            <td><label><input type="text" /></label></td>
+                                        </tr>
+                                        <tr>
+                                            <td>OTROS INGRESOS 7</td>
+                                            <td><label><input type="text" /></label></td>
+                                            <td><label><input type="text" /></label></td>
+                                            <td><label><input type="text" /></label></td>
+                                            <td><label><input type="text" /></label></td>
+                                            <td><label><input type="text" /></label></td>
+                                            <td><label><input type="text" /></label></td>
+                                        </tr>
+                                        <tr>
+                                            <td>OTROS INGRESOS 8</td>
+                                            <td><label><input type="text" /></label></td>
+                                            <td><label><input type="text" /></label></td>
+                                            <td><label><input type="text" /></label></td>
+                                            <td><label><input type="text" /></label></td>
+                                            <td><label><input type="text" /></label></td>
+                                            <td><label><input type="text" /></label></td>
+                                        </tr>
+                                        <tr>
+                                            <td>OTROS INGRESOS 9</td>
+                                            <td><label><input type="text" /></label></td>
+                                            <td><label><input type="text" /></label></td>
+                                            <td><label><input type="text" /></label></td>
+                                            <td><label><input type="text" /></label></td>
+                                            <td><label><input type="text" /></label></td>
+                                            <td><label><input type="text" /></label></td>
+                                        </tr>
+                                        <tr>
+                                            <td>OTROS INGRESOS 10</td>
+                                            <td><label><input type="text" /></label></td>
+                                            <td><label><input type="text" /></label></td>
+                                            <td><label><input type="text" /></label></td>
+                                            <td><label><input type="text" /></label></td>
+                                            <td><label><input type="text" /></label></td>
+                                            <td><label><input type="text" /></label></td>
+                                        </tr>
+
+
+                                        </tbody>
+
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="tabs-pane" id="tabs-2" role="tabpanel" aria-hidden="false"
+                                     aria-labelledby="aui-uid-0">
+                                    <table class="aui">
+                                        <thead>
+                                        <tr>
+                                            <th>CONCEPTO</th>
+                                            <th>AÑO 0</th>
+                                            <th>AÑO 1</th>
+                                            <th>AÑO 2</th>
+                                            <th>AÑO 3</th>
+                                            <th>AÑO 4</th>
+                                            <th>AÑO 5</th>
+                                        </tr>
+                                        <tr>
+                                            <th>COSTOS (UF)</th>
+                                            <th><span class="aui-lozenge">UF 2.00</span></th>
+                                            <th><span class="aui-lozenge">UF 0.00</span></th>
+                                            <th><span class="aui-lozenge">UF 0.00</span></th>
+                                            <th><span class="aui-lozenge">UF 0.00</span></th>
+                                            <th><span class="aui-lozenge">UF 0.00</span></th>
+                                            <th><span class="aui-lozenge">UF 0.00</span></th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <td width="310">COSTO TRANSACCIONAL</td>
+                                            <td><label><input type="text" value="1" /></label></td>
+                                            <td><label><input type="text" /></label></td>
+                                            <td><label><input type="text" /></label></td>
+                                            <td><label><input type="text" /></label></td>
+                                            <td><label><input type="text" /></label></td>
+                                            <td><label><input type="text" /></label></td>
+                                        </tr>
+                                        <tr>
+                                            <td>COSTO SERVICIO DE RED</td>
+                                            <td><label><input type="text" value="1"/></label></td>
+                                            <td><label><input type="text" /></label></td>
+                                            <td><label><input type="text" /></label></td>
+                                            <td><label><input type="text" /></label></td>
+                                            <td><label><input type="text" /></label></td>
+                                            <td><label><input type="text" /></label></td>
+                                        </tr>
+                                        <tr>
+                                            <td>OTROS COSTOS 1</td>
+                                            <td><label><input type="text" /></label></td>
+                                            <td><label><input type="text" /></label></td>
+                                            <td><label><input type="text" /></label></td>
+                                            <td><label><input type="text" /></label></td>
+                                            <td><label><input type="text" /></label></td>
+                                            <td><label><input type="text" /></label></td>
+                                        </tr>
+                                        <tr>
+                                            <td>OTROS COSTOS 2</td>
+                                            <td><label><input type="text" /></label></td>
+                                            <td><label><input type="text" /></label></td>
+                                            <td><label><input type="text" /></label></td>
+                                            <td><label><input type="text" /></label></td>
+                                            <td><label><input type="text" /></label></td>
+                                            <td><label><input type="text" /></label></td>
+                                        </tr>
+                                        <tr>
+                                            <td>OTROS COSTOS 3</td>
+                                            <td><label><input type="text" /></label></td>
+                                            <td><label><input type="text" /></label></td>
+                                            <td><label><input type="text" /></label></td>
+                                            <td><label><input type="text" /></label></td>
+                                            <td><label><input type="text" /></label></td>
+                                            <td><label><input type="text" /></label></td>
+                                        </tr>
+                                        <tr>
+                                            <td>OTROS COSTOS 4</td>
+                                            <td><label><input type="text" /></label></td>
+                                            <td><label><input type="text" /></label></td>
+                                            <td><label><input type="text" /></label></td>
+                                            <td><label><input type="text" /></label></td>
+                                            <td><label><input type="text" /></label></td>
+                                            <td><label><input type="text" /></label></td>
+                                        </tr>
+                                        <tr>
+                                            <td>OTROS COSTOS 5</td>
+                                            <td><label><input type="text" /></label></td>
+                                            <td><label><input type="text" /></label></td>
+                                            <td><label><input type="text" /></label></td>
+                                            <td><label><input type="text" /></label></td>
+                                            <td><label><input type="text" /></label></td>
+                                            <td><label><input type="text" /></label></td>
+                                        </tr>
+                                        <tr>
+                                            <td>OTROS COSTOS 6</td>
+                                            <td><label><input type="text" /></label></td>
+                                            <td><label><input type="text" /></label></td>
+                                            <td><label><input type="text" /></label></td>
+                                            <td><label><input type="text" /></label></td>
+                                            <td><label><input type="text" /></label></td>
+                                            <td><label><input type="text" /></label></td>
+                                        </tr>
+                                        <tr>
+                                            <td>OTROS COSTOS 7</td>
+                                            <td><label><input type="text" /></label></td>
+                                            <td><label><input type="text" /></label></td>
+                                            <td><label><input type="text" /></label></td>
+                                            <td><label><input type="text" /></label></td>
+                                            <td><label><input type="text" /></label></td>
+                                            <td><label><input type="text" /></label></td>
+                                        </tr>
+                                        <tr>
+                                            <td>OTROS COSTOS 8</td>
+                                            <td><label><input type="text" /></label></td>
+                                            <td><label><input type="text" /></label></td>
+                                            <td><label><input type="text" /></label></td>
+                                            <td><label><input type="text" /></label></td>
+                                            <td><label><input type="text" /></label></td>
+                                            <td><label><input type="text" /></label></td>
+                                        </tr>
+                                        <tr>
+                                            <td>OTROS COSTOS 9</td>
+                                            <td><label><input type="text" /></label></td>
+                                            <td><label><input type="text" /></label></td>
+                                            <td><label><input type="text" /></label></td>
+                                            <td><label><input type="text" /></label></td>
+                                            <td><label><input type="text" /></label></td>
+                                            <td><label><input type="text" /></label></td>
+                                        </tr>
+                                        <tr>
+                                            <td>OTROS COSTOS 10</td>
+                                            <td><label><input type="text" /></label></td>
+                                            <td><label><input type="text" /></label></td>
+                                            <td><label><input type="text" /></label></td>
+                                            <td><label><input type="text" /></label></td>
+                                            <td><label><input type="text" /></label></td>
+                                            <td><label><input type="text" /></label></td>
+                                        </tr>
+
+
+                                        </tbody>
+
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="tabs-pane" id="tabs-3" role="tabpanel" aria-hidden="false"
+                                     aria-labelledby="aui-uid-0">
+                                    <table class="aui">
+                                        <thead>
+                                        <tr>
+                                            <th width="310">CONCEPTO</th>
+                                            <th>AÑO 0</th>
+                                            <th>AÑO 1</th>
+                                            <th>AÑO 2</th>
+                                            <th>AÑO 3</th>
+                                            <th>AÑO 4</th>
+                                            <th>AÑO 5</th>
+                                        </tr>
+                                        <tr>
+                                            <th>GASTOS (UF)</th>
+                                            <th><span class="aui-lozenge">UF 4.00</span></th>
+                                            <th><span class="aui-lozenge">UF 0.00</span></th>
+                                            <th><span class="aui-lozenge">UF 0.00</span></th>
+                                            <th><span class="aui-lozenge">UF 0.00</span></th>
+                                            <th><span class="aui-lozenge">UF 0.00</span></th>
+                                            <th><span class="aui-lozenge">UF 0.00</span></th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <td>MANTENCIONES</td>
+                                            <td><label><input type="text" value="1" /></label></td>
+                                            <td><label><input type="text" /></label></td>
+                                            <td><label><input type="text" /></label></td>
+                                            <td><label><input type="text" /></label></td>
+                                            <td><label><input type="text" /></label></td>
+                                            <td><label><input type="text" /></label></td>
+                                        </tr>
+                                        <tr>
+                                            <td>LICENCIAS</td>
+                                            <td><label><input type="text" value="1"/></label></td>
+                                            <td><label><input type="text" /></label></td>
+                                            <td><label><input type="text" /></label></td>
+                                            <td><label><input type="text" /></label></td>
+                                            <td><label><input type="text" /></label></td>
+                                            <td><label><input type="text" /></label></td>
+                                        </tr>
+                                        <tr>
+                                            <td>INGRESO POR ARRIENDO POS</td>
+                                            <td><label><input type="text" value="1"/></label></td>
+                                            <td><label><input type="text" /></label></td>
+                                            <td><label><input type="text" /></label></td>
+                                            <td><label><input type="text" /></label></td>
+                                            <td><label><input type="text" /></label></td>
+                                            <td><label><input type="text" /></label></td>
+                                        </tr>
+                                        <tr>
+                                            <td>DESARROLLO DE SOFTWARE</td>
+                                            <td><label><input type="text" value="1"/></label></td>
+                                            <td><label><input type="text" /></label></td>
+                                            <td><label><input type="text" /></label></td>
+                                            <td><label><input type="text" /></label></td>
+                                            <td><label><input type="text" /></label></td>
+                                            <td><label><input type="text" /></label></td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>ASESORIAS</td>
+                                            <td><label><input type="text" /></label></td>
+                                            <td><label><input type="text" /></label></td>
+                                            <td><label><input type="text" /></label></td>
+                                            <td><label><input type="text" /></label></td>
+                                            <td><label><input type="text" /></label></td>
+                                            <td><label><input type="text" /></label></td>
+                                        </tr>
+                                        <tr>
+                                            <td>GESTION DE RIESGO</td>
+                                            <td><label><input type="text" /></label></td>
+                                            <td><label><input type="text" /></label></td>
+                                            <td><label><input type="text" /></label></td>
+                                            <td><label><input type="text" /></label></td>
+                                            <td><label><input type="text" /></label></td>
+                                            <td><label><input type="text" /></label></td>
+                                        </tr>
+                                        <tr>
+                                            <td>QA</td>
+                                            <td><label><input type="text" /></label></td>
+                                            <td><label><input type="text" /></label></td>
+                                            <td><label><input type="text" /></label></td>
+                                            <td><label><input type="text" /></label></td>
+                                            <td><label><input type="text" /></label></td>
+                                            <td><label><input type="text" /></label></td>
+                                        </tr>
+                                        <tr>
+                                            <td>DESARROLLO COMERCIAL</td>
+                                            <td><label><input type="text" /></label></td>
+                                            <td><label><input type="text" /></label></td>
+                                            <td><label><input type="text" /></label></td>
+                                            <td><label><input type="text" /></label></td>
+                                            <td><label><input type="text" /></label></td>
+                                            <td><label><input type="text" /></label></td>
+                                        </tr>
+                                        <tr>
+                                            <td>PUESTA EN PRODUCCION</td>
+                                            <td><label><input type="text" /></label></td>
+                                            <td><label><input type="text" /></label></td>
+                                            <td><label><input type="text" /></label></td>
+                                            <td><label><input type="text" /></label></td>
+                                            <td><label><input type="text" /></label></td>
+                                            <td><label><input type="text" /></label></td>
+                                        </tr>
+                                        <tr>
+                                            <td>HH IMPLEMENTACION INTERNA</td>
+                                            <td><label><input type="text" /></label></td>
+                                            <td><label><input type="text" /></label></td>
+                                            <td><label><input type="text" /></label></td>
+                                            <td><label><input type="text" /></label></td>
+                                            <td><label><input type="text" /></label></td>
+                                            <td><label><input type="text" /></label></td>
+                                        </tr>
+                                        <tr>
+                                            <td>HH IMPLEMENTACION EXTERNA</td>
+                                            <td><label><input type="text" /></label></td>
+                                            <td><label><input type="text" /></label></td>
+                                            <td><label><input type="text" /></label></td>
+                                            <td><label><input type="text" /></label></td>
+                                            <td><label><input type="text" /></label></td>
+                                            <td><label><input type="text" /></label></td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>OTROS GASTOS 1</td>
+                                            <td><label><input type="text" /></label></td>
+                                            <td><label><input type="text" /></label></td>
+                                            <td><label><input type="text" /></label></td>
+                                            <td><label><input type="text" /></label></td>
+                                            <td><label><input type="text" /></label></td>
+                                            <td><label><input type="text" /></label></td>
+                                        </tr>
+                                        <tr>
+                                            <td>OTROS GASTOS 2</td>
+                                            <td><label><input type="text" /></label></td>
+                                            <td><label><input type="text" /></label></td>
+                                            <td><label><input type="text" /></label></td>
+                                            <td><label><input type="text" /></label></td>
+                                            <td><label><input type="text" /></label></td>
+                                            <td><label><input type="text" /></label></td>
+                                        </tr>
+                                        <tr>
+                                            <td>OTROS GASTOS 3</td>
+                                            <td><label><input type="text" /></label></td>
+                                            <td><label><input type="text" /></label></td>
+                                            <td><label><input type="text" /></label></td>
+                                            <td><label><input type="text" /></label></td>
+                                            <td><label><input type="text" /></label></td>
+                                            <td><label><input type="text" /></label></td>
+                                        </tr>
+                                        <tr>
+                                            <td>OTROS GASTOS 4</td>
+                                            <td><label><input type="text" /></label></td>
+                                            <td><label><input type="text" /></label></td>
+                                            <td><label><input type="text" /></label></td>
+                                            <td><label><input type="text" /></label></td>
+                                            <td><label><input type="text" /></label></td>
+                                            <td><label><input type="text" /></label></td>
+                                        </tr>
+                                        <tr>
+                                            <td>OTROS GASTOS 5</td>
+                                            <td><label><input type="text" /></label></td>
+                                            <td><label><input type="text" /></label></td>
+                                            <td><label><input type="text" /></label></td>
+                                            <td><label><input type="text" /></label></td>
+                                            <td><label><input type="text" /></label></td>
+                                            <td><label><input type="text" /></label></td>
+                                        </tr>
+                                        <tr>
+                                            <td>OTROS GASTOS 6</td>
+                                            <td><label><input type="text" /></label></td>
+                                            <td><label><input type="text" /></label></td>
+                                            <td><label><input type="text" /></label></td>
+                                            <td><label><input type="text" /></label></td>
+                                            <td><label><input type="text" /></label></td>
+                                            <td><label><input type="text" /></label></td>
+                                        </tr>
+                                        <tr>
+                                            <td>OTROS GASTOS 7</td>
+                                            <td><label><input type="text" /></label></td>
+                                            <td><label><input type="text" /></label></td>
+                                            <td><label><input type="text" /></label></td>
+                                            <td><label><input type="text" /></label></td>
+                                            <td><label><input type="text" /></label></td>
+                                            <td><label><input type="text" /></label></td>
+                                        </tr>
+                                        <tr>
+                                            <td>OTROS GASTOS 8</td>
+                                            <td><label><input type="text" /></label></td>
+                                            <td><label><input type="text" /></label></td>
+                                            <td><label><input type="text" /></label></td>
+                                            <td><label><input type="text" /></label></td>
+                                            <td><label><input type="text" /></label></td>
+                                            <td><label><input type="text" /></label></td>
+                                        </tr>
+                                        <tr>
+                                            <td>OTROS GASTOS 9</td>
+                                            <td><label><input type="text" /></label></td>
+                                            <td><label><input type="text" /></label></td>
+                                            <td><label><input type="text" /></label></td>
+                                            <td><label><input type="text" /></label></td>
+                                            <td><label><input type="text" /></label></td>
+                                            <td><label><input type="text" /></label></td>
+                                        </tr>
+                                        <tr>
+                                            <td>OTROS GASTOS 10</td>
+                                            <td><label><input type="text" /></label></td>
+                                            <td><label><input type="text" /></label></td>
+                                            <td><label><input type="text" /></label></td>
+                                            <td><label><input type="text" /></label></td>
+                                            <td><label><input type="text" /></label></td>
+                                            <td><label><input type="text" /></label></td>
+                                        </tr>
+
+                                        </tbody>
+
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <table class="aui">
+                                <thead>
+                                <tr>
+                                    <th width="310">RESULTADO (UF)</th>
+                                    <th><span class="aui-lozenge">UF 2.00</span></th>
+                                    <th><span class="aui-lozenge">UF 0.00</span></th>
+                                    <th><span class="aui-lozenge">UF 0.00</span></th>
+                                    <th><span class="aui-lozenge">UF 0.00</span></th>
+                                    <th><span class="aui-lozenge">UF 0.00</span></th>
+                                    <th><span class="aui-lozenge">UF 0.00</span></th>
+                                </tr>
+                                </thead>
+                            </table>
+                        </div>
+                        <br>
+                        <div class="aui-flatpack-example">
+                            <table class="aui">
+                                <thead>
+                                <tr>
+                                    <th width="310">INVERSIÓN (UF)</th>
+                                    <th><span class="aui-lozenge">UF 4.00</span></th>
+                                    <th><span class="aui-lozenge">UF 0.00</span></th>
+                                    <th><span class="aui-lozenge">UF 0.00</span></th>
+                                    <th><span class="aui-lozenge">UF 0.00</span></th>
+                                    <th><span class="aui-lozenge">UF 0.00</span></th>
+                                    <th><span class="aui-lozenge">UF 0.00</span></th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td>SOFTWARE</td>
+                                    <td><label><input type="text" value="1" /></label></td>
+                                    <td><label><input type="text" /></label></td>
+                                    <td><label><input type="text" /></label></td>
+                                    <td><label><input type="text" /></label></td>
+                                    <td><label><input type="text" /></label></td>
+                                    <td><label><input type="text" /></label></td>
+                                </tr>
+                                <tr>
+                                    <td>HARDWARE</td>
+                                    <td><label><input type="text" value="1"/></label></td>
+                                    <td><label><input type="text" /></label></td>
+                                    <td><label><input type="text" /></label></td>
+                                    <td><label><input type="text" /></label></td>
+                                    <td><label><input type="text" /></label></td>
+                                    <td><label><input type="text" /></label></td>
+                                </tr>
+                                <tr>
+                                    <td>INFRAESTRUCTURA</td>
+                                    <td><label><input type="text" value="1"/></label></td>
+                                    <td><label><input type="text" /></label></td>
+                                    <td><label><input type="text" /></label></td>
+                                    <td><label><input type="text" /></label></td>
+                                    <td><label><input type="text" /></label></td>
+                                    <td><label><input type="text" /></label></td>
+                                </tr>
+                                <tr>
+                                    <td>INSTALACIONES</td>
+                                    <td><label><input type="text" value="1"/></label></td>
+                                    <td><label><input type="text" /></label></td>
+                                    <td><label><input type="text" /></label></td>
+                                    <td><label><input type="text" /></label></td>
+                                    <td><label><input type="text" /></label></td>
+                                    <td><label><input type="text" /></label></td>
+                                </tr>
+
+                                <tr>
+                                    <td>EQUIPOS</td>
+                                    <td><label><input type="text" /></label></td>
+                                    <td><label><input type="text" /></label></td>
+                                    <td><label><input type="text" /></label></td>
+                                    <td><label><input type="text" /></label></td>
+                                    <td><label><input type="text" /></label></td>
+                                    <td><label><input type="text" /></label></td>
+                                </tr>
+                                <tr>
+                                    <td>MUEBLES</td>
+                                    <td><label><input type="text" /></label></td>
+                                    <td><label><input type="text" /></label></td>
+                                    <td><label><input type="text" /></label></td>
+                                    <td><label><input type="text" /></label></td>
+                                    <td><label><input type="text" /></label></td>
+                                    <td><label><input type="text" /></label></td>
+                                </tr>
+                                <tr>
+                                    <td>OTROS 1</td>
+                                    <td><label><input type="text" /></label></td>
+                                    <td><label><input type="text" /></label></td>
+                                    <td><label><input type="text" /></label></td>
+                                    <td><label><input type="text" /></label></td>
+                                    <td><label><input type="text" /></label></td>
+                                    <td><label><input type="text" /></label></td>
+                                </tr>
+                                <tr>
+                                    <td>OTROS 2</td>
+                                    <td><label><input type="text" /></label></td>
+                                    <td><label><input type="text" /></label></td>
+                                    <td><label><input type="text" /></label></td>
+                                    <td><label><input type="text" /></label></td>
+                                    <td><label><input type="text" /></label></td>
+                                    <td><label><input type="text" /></label></td>
+                                </tr>
+                                <tr>
+                                    <td>OTROS 3</td>
+                                    <td><label><input type="text" /></label></td>
+                                    <td><label><input type="text" /></label></td>
+                                    <td><label><input type="text" /></label></td>
+                                    <td><label><input type="text" /></label></td>
+                                    <td><label><input type="text" /></label></td>
+                                    <td><label><input type="text" /></label></td>
+                                </tr>
+                                <tr>
+                                    <td>OTROS 4</td>
+                                    <td><label><input type="text" /></label></td>
+                                    <td><label><input type="text" /></label></td>
+                                    <td><label><input type="text" /></label></td>
+                                    <td><label><input type="text" /></label></td>
+                                    <td><label><input type="text" /></label></td>
+                                    <td><label><input type="text" /></label></td>
+                                </tr>
+                                <tr>
+                                    <td>OTROS 5</td>
+                                    <td><label><input type="text" /></label></td>
+                                    <td><label><input type="text" /></label></td>
+                                    <td><label><input type="text" /></label></td>
+                                    <td><label><input type="text" /></label></td>
+                                    <td><label><input type="text" /></label></td>
+                                    <td><label><input type="text" /></label></td>
+                                </tr>
+                                <tr>
+                                    <td>OTROS 6</td>
+                                    <td><label><input type="text" /></label></td>
+                                    <td><label><input type="text" /></label></td>
+                                    <td><label><input type="text" /></label></td>
+                                    <td><label><input type="text" /></label></td>
+                                    <td><label><input type="text" /></label></td>
+                                    <td><label><input type="text" /></label></td>
+                                </tr>
+                                <tr>
+                                    <td>OTROS 7</td>
+                                    <td><label><input type="text" /></label></td>
+                                    <td><label><input type="text" /></label></td>
+                                    <td><label><input type="text" /></label></td>
+                                    <td><label><input type="text" /></label></td>
+                                    <td><label><input type="text" /></label></td>
+                                    <td><label><input type="text" /></label></td>
+                                </tr>
+                                <tr>
+                                    <td>OTROS 8</td>
+                                    <td><label><input type="text" /></label></td>
+                                    <td><label><input type="text" /></label></td>
+                                    <td><label><input type="text" /></label></td>
+                                    <td><label><input type="text" /></label></td>
+                                    <td><label><input type="text" /></label></td>
+                                    <td><label><input type="text" /></label></td>
+                                </tr>
+                                <tr>
+                                    <td>OTROS 9</td>
+                                    <td><label><input type="text" /></label></td>
+                                    <td><label><input type="text" /></label></td>
+                                    <td><label><input type="text" /></label></td>
+                                    <td><label><input type="text" /></label></td>
+                                    <td><label><input type="text" /></label></td>
+                                    <td><label><input type="text" /></label></td>
+                                </tr>
+                                <tr>
+                                    <td>OTROS 10</td>
+                                    <td><label><input type="text" /></label></td>
+                                    <td><label><input type="text" /></label></td>
+                                    <td><label><input type="text" /></label></td>
+                                    <td><label><input type="text" /></label></td>
+                                    <td><label><input type="text" /></label></td>
+                                    <td><label><input type="text" /></label></td>
+                                </tr>
+
+                                </tbody>
+
+                                </tbody>
+                            </table>
+                        </div>
+                        <br>
+                        <div class="aui-flatpack-example">
+                            <table class="aui">
+                                <thead>
+                                <tr>
+                                    <th width="310">FLUJO DE CAJA</th>
+                                    <th><span class="aui-lozenge">UF 4.00</span></th>
+                                    <th><span class="aui-lozenge">UF 0.00</span></th>
+                                    <th><span class="aui-lozenge">UF 0.00</span></th>
+                                    <th><span class="aui-lozenge">UF 0.00</span></th>
+                                    <th><span class="aui-lozenge">UF 0.00</span></th>
+                                    <th><span class="aui-lozenge">UF 0.00</span></th>
+                                </tr>
+                                <tr>
+                                    <th width="310">FLUJO DE CAJA DESCONTADO</th>
+                                    <th><span class="aui-lozenge">UF 4.00</span></th>
+                                    <th><span class="aui-lozenge">UF 0.00</span></th>
+                                    <th><span class="aui-lozenge">UF 0.00</span></th>
+                                    <th><span class="aui-lozenge">UF 0.00</span></th>
+                                    <th><span class="aui-lozenge">UF 0.00</span></th>
+                                    <th><span class="aui-lozenge">UF 0.00</span></th>
+                                </tr>
+                                <tr>
+                                    <th width="310">FLUJO DE CAJA ACUMULADO</th>
+                                    <th><span class="aui-lozenge">UF 4.00</span></th>
+                                    <th><span class="aui-lozenge">UF 0.00</span></th>
+                                    <th><span class="aui-lozenge">UF 0.00</span></th>
+                                    <th><span class="aui-lozenge">UF 0.00</span></th>
+                                    <th><span class="aui-lozenge">UF 0.00</span></th>
+                                    <th><span class="aui-lozenge">UF 0.00</span></th>
+                                </tr>
+                                <tr>
+                                    <th width="310">FLUJO DE INGRESOS DESCONTADO</th>
+                                    <th><span class="aui-lozenge">UF 4.00</span></th>
+                                    <th><span class="aui-lozenge">UF 0.00</span></th>
+                                    <th><span class="aui-lozenge">UF 0.00</span></th>
+                                    <th><span class="aui-lozenge">UF 0.00</span></th>
+                                    <th><span class="aui-lozenge">UF 0.00</span></th>
+                                    <th><span class="aui-lozenge">UF 0.00</span></th>
+                                </tr>
+                                <tr>
+                                    <th width="310">FLUJO DE COSTOS DESCONTADO</th>
+                                    <th><span class="aui-lozenge">UF 4.00</span></th>
+                                    <th><span class="aui-lozenge">UF 0.00</span></th>
+                                    <th><span class="aui-lozenge">UF 0.00</span></th>
+                                    <th><span class="aui-lozenge">UF 0.00</span></th>
+                                    <th><span class="aui-lozenge">UF 0.00</span></th>
+                                    <th><span class="aui-lozenge">UF 0.00</span></th>
+                                </tr>
+                                <tr>
+                                    <th width="310">FLUJO RESULTADO DESCONTADO</th>
+                                    <th><span class="aui-lozenge">UF 4.00</span></th>
+                                    <th><span class="aui-lozenge">UF 0.00</span></th>
+                                    <th><span class="aui-lozenge">UF 0.00</span></th>
+                                    <th><span class="aui-lozenge">UF 0.00</span></th>
+                                    <th><span class="aui-lozenge">UF 0.00</span></th>
+                                    <th><span class="aui-lozenge">UF 0.00</span></th>
+                                </tr>
+                                <tr>
+                                    <th width="310">FLUJO INVERSIÓN DESCONTADO</th>
+                                    <th><span class="aui-lozenge">UF 4.00</span></th>
+                                    <th><span class="aui-lozenge">UF 0.00</span></th>
+                                    <th><span class="aui-lozenge">UF 0.00</span></th>
+                                    <th><span class="aui-lozenge">UF 0.00</span></th>
+                                    <th><span class="aui-lozenge">UF 0.00</span></th>
+                                    <th><span class="aui-lozenge">UF 0.00</span></th>
+                                </tr>
+                                </thead>
+                            </table>
+                        </div>
+                        <br>
+                        <div class="aui-flatpack-example">
+                            <table class="aui" style="width: 30%">
+                                <tbody>
+                                    <tr>
+                                        <td><b>TASA DE DESCUENTO</b></td>
+                                        <td>15%</td>
+                                    </tr>
+                                    <tr>
+                                        <td><b>VPN</b></td>
+                                        <td>-UF 5,077.47</td>
+                                    </tr>
+                                    <tr>
+                                        <td><b>TIR</b></td>
+                                        <td>-UF 5,077.47</td>
+                                    </tr>
+                                    <tr>
+                                        <td><b>FLUJO DE INGRESOS</b></td>
+                                        <td>-UF 5,077.47</td>
+                                    </tr>
+                                    <tr>
+                                        <td><b>FLUJO DE COSTOS</b></td>
+                                        <td>-UF 5,077.47</td>
+                                    </tr>
+                                    <tr>
+                                        <td><b>FLUJO DE RESULTADO</b></td>
+                                        <td>-UF 5,077.47</td>
+                                    </tr>
+                                    <tr>
+                                        <td><b>FLUJO DE INVERSIÓN</b></td>
+                                        <td>-UF 5,077.47</td>
+                                    </tr>
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+</form>
+</body>
+</html>
