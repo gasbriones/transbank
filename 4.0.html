@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <!-- External dependencies -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-migrate/1.4.1/jquery-migrate.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/sinon.js/1.15.4/sinon.js"></script>
+    <script src="//unpkg.com/@atlassian/aui@7.1.1/dist/aui/js/aui.js"></script>
+    <script src="//unpkg.com/@atlassian/aui@7.1.1/dist/aui/js/aui-experimental.js"></script>
+    <script src="//unpkg.com/@atlassian/aui@7.1.1/dist/aui/js/aui-datepicker.js"></script>
+    <link rel="stylesheet" type="text/css" href="//unpkg.com/@atlassian/aui@7.1.1/dist/aui/css/aui.css"/>
+    <link rel="stylesheet" type="text/css" href="//unpkg.com/@atlassian/aui@7.1.1/dist/aui/css/aui-experimental.css"/>
+    <link rel="stylesheet" type="text/css" href="//unpkg.com/@atlassian/aui@7.1.1/dist/aui/css/forms.css"/>
+    <!-- / External dependencies -->
+    <style>
+        table {
+            width: 100%;
+        }
+
+        .aui-button {
+            width: 100%;
+            font-size: 12px;
+            text-align: center;
+        }
+    </style>
+
+</head>
+<body>
+<form class="aui">
+    <div class="aui-page-panel">
+        <div class="aui-page-panel-inner">
+            <section class="aui-page-panel-content">
+                <div class="aui-group">
+                    <div class="aui-item">
+                        <h5>CUESTIONARIO PARA DEFINICIÓN DE METODOLOGÍA AGILE</h5>
+                        <br>
+                        <div class="aui-flatpack-example">
+                            <table class="aui">
+                                <thead>
+                                <tr>
+                                    <th></th>
+                                    <th>Respuesta</th>
+                                    <th>Responsable</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>¿Transbank y terceros están dispuestos a trabajar con metodología agile? </td>
+                                        <td width="200">
+
+                                            <input class="radio" type="radio"  name="rads1">
+                                             <label>Si</label>
+                                            <input class="radio" type="radio" name="rads1">
+                                            <label>No</label>
+                                        </td>
+                                        <td>
+                                            Negocio / Solicitante / Gestión de la Demanda
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>¿El representante del negocio estará disponible para interactuar diariamente con el equipo de ejecución? (Por ejemplo, proveer requerimientos funcionales y validar entregables)</td>
+                                        <td width="200">
+
+                                            <input class="radio" type="radio"  name="rads2">
+                                            <label>Si</label>
+                                            <input class="radio" type="radio" name="rads2">
+                                            <label>No</label>
+                                        </td>
+                                        <td>
+                                            Negocio / Solicitante
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>¿El representante del negocio tendrá la autoridad necesaria para tomar decisiones como: priorizar o re-priorizar el alcance, firmar historias de usuario, reducir o ampliar el alcance del proyecto en caso de ser necesario? </td>
+                                        <td width="200">
+
+                                            <input class="radio" type="radio"  name="rads3">
+                                            <label>Si</label>
+                                            <input class="radio" type="radio" name="rads3">
+                                            <label>No</label>
+                                        </td>
+                                        <td>
+                                            Negocio / Solicitante
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>¿Agrega valor al negocio entregar la solución en iteraciones cortas?</td>
+                                        <td width="200">
+
+                                            <input class="radio" type="radio"  name="rads4">
+                                            <label>Si</label>
+                                            <input class="radio" type="radio" name="rads4">
+                                            <label>No</label>
+                                        </td>
+                                        <td>
+                                            Negocio / Solicitante
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>¿Existe una necesidad de negocio para un rápido time-to-market?</td>
+                                        <td width="200">
+
+                                            <input class="radio" type="radio"  name="rads5">
+                                            <label>Si</label>
+                                            <input class="radio" type="radio" name="rads5">
+                                            <label>No</label>
+                                        </td>
+                                        <td>
+                                            Negocio / Solicitante
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>¿El alcance, la programación y el presupuesto de la iniciativa serán fijados contractualmente?</td>
+                                        <td width="200">
+
+                                            <input class="radio" type="radio"  name="rads6">
+                                            <label>Si</label>
+                                            <input class="radio" type="radio" name="rads6">
+                                            <label>No</label>
+                                        </td>
+                                        <td>
+                                            Negocio / Solicitante
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>¿El producto final será de cara al consumidor?</td>
+                                        <td width="200">
+
+                                            <input class="radio" type="radio"  name="rads7">
+                                            <label>Si</label>
+                                            <input class="radio" type="radio" name="rads7">
+                                            <label>No</label>
+                                        </td>
+                                        <td>
+                                            Negocio / Solicitante
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>¿La experiencia del usuario/cliente es un aspecto crítico de la solución?</td>
+                                        <td width="200">
+
+                                            <input class="radio" type="radio"  name="rads8">
+                                            <label>Si</label>
+                                            <input class="radio" type="radio" name="rads8">
+                                            <label>No</label>
+                                        </td>
+                                        <td>
+                                            Negocio / Solicitante
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>¿Existe flexibilidad para cambios de alcance/re-priorización a lo largo del proyecto?</td>
+                                        <td width="200">
+
+                                            <input class="radio" type="radio"  name="rads9">
+                                            <label>Si</label>
+                                            <input class="radio" type="radio" name="rads9">
+                                            <label>No</label>
+                                        </td>
+                                        <td>
+                                            Tecnología / Gestión de la Demanda
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>¿Existen otras iniciativas que dependan de esta para su delivery?</td>
+                                        <td width="200">
+
+                                            <input class="radio" type="radio"  name="rads10">
+                                            <label>Si</label>
+                                            <input class="radio" type="radio" name="rads10">
+                                            <label>No</label>
+                                        </td>
+                                        <td>
+                                            Tecnología / Gestión de la Demanda
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>¿Esta iniciativa depende de otras para su delivery?</td>
+                                        <td width="200">
+
+                                            <input class="radio" type="radio"  name="rads11">
+                                            <label>Si</label>
+                                            <input class="radio" type="radio" name="rads11">
+                                            <label>No</label>
+                                        </td>
+                                        <td>
+                                            Tecnología / Gestión de la Demanda
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>¿El equipo de delivery participará de los procesos de definición de requerimientos?</td>
+                                        <td width="200">
+
+                                            <input class="radio" type="radio"  name="rads12">
+                                            <label>Si</label>
+                                            <input class="radio" type="radio" name="rads12">
+                                            <label>No</label>
+                                        </td>
+                                        <td>
+                                            Tecnología / Gestión de la Demanda
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>En caso de ser una iniciativa con múltiples/distintos participantes  (Transbank, Emisores, SAG, Proveedores, entre otros), ¿Se establecerán como un único equipo de proyecto dispuestos a colaborar de forma fácil y eficaz?</td>
+                                        <td width="200">
+
+                                            <input class="radio" type="radio"  name="rads13">
+                                            <label>Si</label>
+                                            <input class="radio" type="radio" name="rads13">
+                                            <label>No</label>
+                                        </td>
+                                        <td>
+                                            Negocio / Solicitante / Tecnología / Gestión de la Demanda
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>¿Se podrán realizar pruebas funcionales automatizadas?</td>
+                                        <td width="200">
+
+                                            <input class="radio" type="radio"  name="rads14">
+                                            <label>Si</label>
+                                            <input class="radio" type="radio" name="rads14">
+                                            <label>No</label>
+                                        </td>
+                                        <td>
+                                            Tecnología
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>¿Se podrán realizar pruebas de integración automatizadas?</td>
+                                        <td width="200">
+
+                                            <input class="radio" type="radio"  name="rads15">
+                                            <label>Si</label>
+                                            <input class="radio" type="radio" name="rads15">
+                                            <label>No</label>
+                                        </td>
+                                        <td>
+                                            Tecnología
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>¿Se podrán realizar pruebas de regresión automatizadas?</td>
+                                        <td width="200">
+
+                                            <input class="radio" type="radio"  name="rads16">
+                                            <label>Si</label>
+                                            <input class="radio" type="radio" name="rads16">
+                                            <label>No</label>
+                                        </td>
+                                        <td>
+                                            Tecnología
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>¿Es compleja la arquitectura técnica necesaria para desarrollar la iniciativa?</td>
+                                        <td width="200">
+
+                                            <input class="radio" type="radio"  name="rads17">
+                                            <label>Si</label>
+                                            <input class="radio" type="radio" name="rads17">
+                                            <label>No</label>
+                                        </td>
+                                        <td>
+                                            Tecnología
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>¿El equipo de delivery cuenta con un coach experimentado en metodología ágil, que haya realizado trabajos similares anteriormente?</td>
+                                        <td width="200">
+
+                                            <input class="radio" type="radio"  name="rads18">
+                                            <label>Si</label>
+                                            <input class="radio" type="radio" name="rads18">
+                                            <label>No</label>
+                                        </td>
+                                        <td>
+                                            Tecnología / Gestión de la Capacidad
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>¿Los integrantes del proyecto pueden ser organizados en equipos independientes y pequeños? (Ej: de máximo 10 personas)</td>
+                                        <td width="200">
+
+                                            <input class="radio" type="radio"  name="rads19">
+                                            <label>Si</label>
+                                            <input class="radio" type="radio" name="rads19">
+                                            <label>No</label>
+                                        </td>
+                                        <td>
+                                            Tecnología / Gestión de la Capacidad
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>¿El equipo de desarrollo se encuentra en el mismo lugar físico? (Ej: mismo edificio)</td>
+                                        <td width="200">
+
+                                            <input class="radio" type="radio"  name="rads20">
+                                            <label>Si</label>
+                                            <input class="radio" type="radio" name="rads20">
+                                            <label>No</label>
+                                        </td>
+                                        <td>
+                                            Tecnología / Gestión de la Capacidad
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>¿El equipo de delivery ha trabajado anteriormente con las tecnologías de desarrollo necesarias para el proyecto? (Ejemplo: lenguajes de programación y paquetes)</td>
+                                        <td width="200">
+
+                                            <input class="radio" type="radio"  name="rads21">
+                                            <label>Si</label>
+                                            <input class="radio" type="radio" name="rads21">
+                                            <label>No</label>
+                                        </td>
+                                        <td>
+                                            Tecnología / Gestión de la Capacidad
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>¿Los miembros del equipo tienen experiencia en sus roles respectivos? (Dev, Test, Config, etc.)</td>
+                                        <td width="200">
+
+                                            <input class="radio" type="radio"  name="rads22">
+                                            <label>Si</label>
+                                            <input class="radio" type="radio" name="rads22">
+                                            <label>No</label>
+                                        </td>
+                                        <td>
+                                            Tecnología / Gestión de la Capacidad
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+</form>
+</body>
+</html>
