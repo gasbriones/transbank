@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <!-- External dependencies -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-migrate/1.4.1/jquery-migrate.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/sinon.js/1.15.4/sinon.js"></script>
+    <script src="//unpkg.com/@atlassian/aui@7.1.1/dist/aui/js/aui.js"></script>
+    <script src="//unpkg.com/@atlassian/aui@7.1.1/dist/aui/js/aui-experimental.js"></script>
+    <script src="//unpkg.com/@atlassian/aui@7.1.1/dist/aui/js/aui-datepicker.js"></script>
+    <link rel="stylesheet" type="text/css" href="//unpkg.com/@atlassian/aui@7.1.1/dist/aui/css/aui.css"/>
+    <link rel="stylesheet" type="text/css" href="//unpkg.com/@atlassian/aui@7.1.1/dist/aui/css/aui-experimental.css"/>
+    <link rel="stylesheet" type="text/css" href="//unpkg.com/@atlassian/aui@7.1.1/dist/aui/css/forms.css"/>
+    <!-- / External dependencies -->
+    <style>
+        table{
+            width: 100%;
+        }
+        .aui-button{
+            width: 100%;
+            font-size: 12px;
+            text-align: center;
+        }
+    </style>
+
+</head>
+<body>
+<form class="aui">
+    <div class="aui-page-panel">
+        <div class="aui-page-panel-inner">
+            <section class="aui-page-panel-content">
+                <div class="aui-group">
+                    <div class="aui-item">
+                        <h5>Resumen Filtro Estratégico</h5>
+                        <br>
+                        <div class="aui-flatpack-example">
+                            <table class="aui">
+                                <thead>
+                                <tr style="">
+                                    <td class="aui-lozenge" style="display: table-cell; font-size: 26px;">
+                                        Score Total
+                                    </td>
+                                    <td class="aui-lozenge" style="display: table-cell; font-size: 26px">
+                                        18.49%
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2"></td>
+                                </tr>
+                                <tr>
+                                    <td class="aui-lozenge" style="display: table-cell; font-size: 26px">
+                                        Score Objetivos y Capacidades Seleccionados
+                                    </td>
+                                    <td class="aui-lozenge" style="display: table-cell;font-size: 26px">
+                                        18.49%
+                                    </td>
+                                </tr>
+
+                                </thead>
+
+                            </table>
+
+                        </div>
+                    </div>
+
+                </div>
+                <br>
+                <div class="aui-group">
+                    <div class="aui-item">
+                        <table class="aui">
+                            <thead>
+                                <tr style="border:1px solid #DFE1E6">
+                                    <th>
+                                        Direccionamiento estratégico
+                                    </th>
+                                    <th>
+                                        Planificación presupuestaria
+                                    </th>
+                                    <th>
+                                        Gestión de la Demanda & PMO
+                                    </th>
+                                    <th>
+                                        Cultura innovadora
+                                    </th>
+                                </tr>
+                            </thead>
+                        </table>
+                        <table class="aui">
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <table>
+                                            <tbody>
+                                                <tr>
+                                                    <td>
+                                                        Tecnologia
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <button class="aui-button">Gestión de Arquitectura</button>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <button class="aui-button">Gestión de Capacidad</button>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <button class="aui-button">Diseño de Prototipos</button>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <button class="aui-button">Delivery de Soluciones</button>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <button class="aui-button">Gestión de Operaciones y Servicios</button>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <button class="aui-button">Gestión de Configuración</button>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <button class="aui-button">Seguridad tecnológica</button>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table>
+                                            <tbody>
+                                            <tr>
+                                                <td>
+                                                    <table>
+                                                        <tr>
+                                                            <td colspan="3">
+                                                                Canales
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td><button class="aui-button">Canales de Distribucíon</button></td>
+                                                            <td><button class="aui-button">Canales de Transaccionales</button></td>
+                                                            <td><button class="aui-button">Gestion de Canales</button></td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <table>
+                                                        <tr>
+                                                            <td colspan="3">
+                                                                Gestión Comercial
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td><button class="aui-button">Planeación de Ventas</button></td>
+                                                            <td><button class="aui-button">Ejecución de Venta</button></td>
+                                                            <td><button class="aui-button">Gestion de Contratos</button></td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <table>
+                                                        <tr>
+                                                            <td colspan="3">
+                                                                Marketing
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td><button class="aui-button">Marketing</button></td>
+                                                            <td><button class="aui-button">Investigación de Mercado</button></td>
+                                                            <td><button class="aui-button">Experiencia de Clientes</button></td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <table>
+                                                        <tr>
+                                                            <td colspan="3">
+                                                                Productos & Segmentos
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td><button class="aui-button">Investigación e Innovacción</button></td>
+                                                            <td><button class="aui-button">Gestión de Segmentos</button></td>
+                                                            <td><button class="aui-button">Gestión de ciclo de vida del Producto</button></td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <table>
+                                                        <tr>
+                                                            <td colspan="4">
+                                                                Procesamiento de transacciones
+                                                        </tr>
+                                                        <tr>
+                                                            <td><button class="aui-button">Investigación e Innovacción</button></td>
+                                                            <td><button class="aui-button">Gestión de Segmentos</button></td>
+                                                            <td><button class="aui-button">Gestión de ciclo de vida del Producto</button></td>
+                                                            <td><button class="aui-button">Gestión de ciclo de vida del Producto</button></td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <table>
+                                                        <tr>
+                                                            <td colspan="4">
+                                                                Operaciones
+                                                        </tr>
+                                                        <tr>
+                                                            <td><button class="aui-button">Servicio al Cliente</button></td>
+                                                            <td><button class="aui-button">Logística, mantención y soporte técnico</button></td>
+                                                            <td><button class="aui-button">Contra cargos y disputas</button></td>
+                                                            <td><button class="aui-button">Reportes operativos</button></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td><button class="aui-button">Gestión de cobranza</button></td>
+                                                            <td><button class="aui-button">Continuidad operacional</button></td>
+                                                            <td colspan="2"></td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <table>
+                                                        <tr>
+                                                            <td colspan="4">
+                                                                Capacidades de Soporte
+                                                        </tr>
+                                                        <tr>
+                                                            <td><button class="aui-button">Finanzas y Control de Gestión</button></td>
+                                                            <td><button class="aui-button">Contabilidad</button></td>
+                                                            <td><button class="aui-button">Gestión de proveedores</button></td>
+                                                            <td><button class="aui-button">Gestión y prevención de riesgo</button></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td><button class="aui-button">Cumplimiento regulatorio</button></td>
+                                                            <td><button class="aui-button">RRHH</button></td>
+                                                            <td><button class="aui-button">Facility Management</button></td>
+                                                            <td><button class="aui-button">Contraloria y  Fiscalia</button></td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table>
+                                            <tbody>
+                                            <tr>
+                                                <td>
+                                                    Ecosistemas y partners
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td><button class="aui-button">Integración de Ecosistema</button></td>
+                                            </tr>
+                                            <tr>
+                                                <td><button class="aui-button">Estión de Ecosistema</button></td>
+                                            </tr>
+                                            </tbody>
+
+                                        </table>
+                                    </td>
+                                </tr>
+
+
+                            </tbody>
+                        </table>
+                        <table class="aui">
+                            <thead>
+                            <tr style="border:1px solid #DFE1E6">
+                                <th>
+                                    Data value chain y Analitycs
+                                </th>
+                            </tr>
+                            </thead>
+                        </table>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+</form>
+</body>
+</html>
