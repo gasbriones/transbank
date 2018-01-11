@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <!-- External dependencies -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-migrate/1.4.1/jquery-migrate.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/sinon.js/1.15.4/sinon.js"></script>
+    <script src="//unpkg.com/@atlassian/aui@7.1.1/dist/aui/js/aui.js"></script>
+    <script src="//unpkg.com/@atlassian/aui@7.1.1/dist/aui/js/aui-experimental.js"></script>
+    <script src="//unpkg.com/@atlassian/aui@7.1.1/dist/aui/js/aui-datepicker.js"></script>
+    <link rel="stylesheet" type="text/css" href="//unpkg.com/@atlassian/aui@7.1.1/dist/aui/css/aui.css"/>
+    <link rel="stylesheet" type="text/css" href="//unpkg.com/@atlassian/aui@7.1.1/dist/aui/css/aui-experimental.css"/>
+    <link rel="stylesheet" type="text/css" href="//unpkg.com/@atlassian/aui@7.1.1/dist/aui/css/forms.css"/>
+    <!-- / External dependencies -->
+    <script>
+      AJS.$(function() {
+        var spinning = false;
+        AJS.$('#spinner-trigger').on('click', function() {
+          if (!spinning) {
+            AJS.$(this).text('Stop Spinning!');
+            AJS.$('.button-spinner').spin();
+            spinning = true;
+          } else {
+            AJS.$(this).text('Do Something');
+            AJS.$('.button-spinner').spinStop();
+            spinning = false;
+          }
+        });
+      })
+    </script>
+
+</head>
+<body>
+
+<div class="aui">
+    <button class="aui-button" id="spinner-trigger">Do Something</button>
+    <div class="button-spinner medium-spinner"></div>
+</div>
+</body>
+</html>
