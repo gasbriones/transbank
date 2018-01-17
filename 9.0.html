@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <!-- External dependencies -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-migrate/1.4.1/jquery-migrate.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/sinon.js/1.15.4/sinon.js"></script>
+    <script src="//unpkg.com/@atlassian/aui@7.1.1/dist/aui/js/aui.js"></script>
+    <script src="//unpkg.com/@atlassian/aui@7.1.1/dist/aui/js/aui-experimental.js"></script>
+    <script src="//unpkg.com/@atlassian/aui@7.1.1/dist/aui/js/aui-datepicker.js"></script>
+    <link rel="stylesheet" type="text/css" href="//unpkg.com/@atlassian/aui@7.1.1/dist/aui/css/aui.css"/>
+    <link rel="stylesheet" type="text/css" href="//unpkg.com/@atlassian/aui@7.1.1/dist/aui/css/aui-experimental.css"/>
+    <link rel="stylesheet" type="text/css" href="//unpkg.com/@atlassian/aui@7.1.1/dist/aui/css/forms.css"/>
+    <!-- / External dependencies -->
+</head>
+<body>
+<form class="aui">
+    <div class="aui-page-panel">
+        <div class="aui-page-panel-inner">
+            <section class="aui-page-panel-content">
+                <h5>9 Impacto en Infraestructura</h5>
+                <div class="aui-group">
+                    <div class="aui-item">
+                        <table class="aui">
+                            <thead>
+                            <tr style="background: gray; color: #fff">
+                                <td>Ambiente</td>
+                                <td>Capa</td>
+                                <td colspan="2">SITE</td>
+                            </tr>
+                            </thead>
+                            <tbody>
+                                <tr style="background: #DFE1E6; color: #000">
+                                    <td></td>
+                                    <td></td>
+                                    <td>PCI</td>
+                                    <td>Non PCI</td>
+                                </tr>
+                                <tr>
+                                    <td>Producción</td>
+                                    <td>
+                                        <table>
+                                            <tr>
+                                                <td>Interacción</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Servicios</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Almacenamiento</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Storage</td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table>
+                                            <tr>
+                                                <td><input type="text" value="N/A" /></td>
+                                            </tr>
+                                            <tr>
+                                                <td><input type="text" value="N/A" /></td>
+                                            </tr>
+                                            <tr>
+                                                <td><input type="text" value="N/A" /></td>
+                                            </tr>
+                                            <tr>
+                                                <td><input type="text" value="N/A" /></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table>
+                                            <tr>
+                                                <td><input type="text" value="N/A" /></td>
+                                            </tr>
+                                            <tr>
+                                                <td><input type="text" value="N/A" /></td>
+                                            </tr>
+                                            <tr>
+                                                <td><input type="text" value="N/A" /></td>
+                                            </tr>
+                                            <tr>
+                                                <td><input type="text" value="N/A" /></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Calidad </td>
+                                    <td>
+                                        <table>
+                                            <tr>
+                                                <td>Interacción</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Servicios</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Almacenamiento</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Storage</td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table>
+                                            <tr>
+                                                <td><input type="text" value="N/A" /></td>
+                                            </tr>
+                                            <tr>
+                                                <td><input type="text" value="N/A" /></td>
+                                            </tr>
+                                            <tr>
+                                                <td><input type="text" value="N/A" /></td>
+                                            </tr>
+                                            <tr>
+                                                <td><input type="text" value="N/A" /></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table>
+                                            <tr>
+                                                <td><input type="text" value="N/A" /></td>
+                                            </tr>
+                                            <tr>
+                                                <td><input type="text" value="N/A" /></td>
+                                            </tr>
+                                            <tr>
+                                                <td><input type="text" value="N/A" /></td>
+                                            </tr>
+                                            <tr>
+                                                <td><input type="text" value="N/A" /></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Desarrollo </td>
+                                    <td>
+                                        <table>
+                                            <tr>
+                                                <td>Interacción</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Servicios</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Almacenamiento</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Storage</td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table>
+                                            <tr>
+                                                <td><input type="text" value="N/A" /></td>
+                                            </tr>
+                                            <tr>
+                                                <td><input type="text" value="N/A" /></td>
+                                            </tr>
+                                            <tr>
+                                                <td><input type="text" value="N/A" /></td>
+                                            </tr>
+                                            <tr>
+                                                <td><input type="text" value="N/A" /></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table>
+                                            <tr>
+                                                <td><input type="text" value="N/A" /></td>
+                                            </tr>
+                                            <tr>
+                                                <td><input type="text" value="N/A" /></td>
+                                            </tr>
+                                            <tr>
+                                                <td><input type="text" value="N/A" /></td>
+                                            </tr>
+                                            <tr>
+                                                <td><input type="text" value="N/A" /></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="aui-item">
+                        <table class="aui">
+                            <thead>
+                            <tr style="background: gray; color: #fff">
+                                <td colspan="3">Incorporación</td>
+                            </tr>
+                            <tr style="background: #DFE1E6; color: #000">
+                                <td>Esfuerzo HH</td>
+                                <td>Costo Total UF</td>
+                                <td>Certeza (%)</td>
+                            </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <table>
+                                            <tr>
+                                                <td><input type="text" /></td>
+                                            </tr>
+                                            <tr>
+                                                <td><input type="text"  /></td>
+                                            </tr>
+                                            <tr>
+                                                <td><input type="text" /></td>
+                                            </tr>
+                                            <tr>
+                                                <td><input type="text" /></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table>
+                                            <tr>
+                                                <td><input type="text" /></td>
+                                            </tr>
+                                            <tr>
+                                                <td><input type="text"  /></td>
+                                            </tr>
+                                            <tr>
+                                                <td><input type="text" /></td>
+                                            </tr>
+                                            <tr>
+                                                <td><input type="text" /></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table>
+                                            <tr>
+                                                <td><input type="text" /></td>
+                                            </tr>
+                                            <tr>
+                                                <td><input type="text"  /></td>
+                                            </tr>
+                                            <tr>
+                                                <td><input type="text" /></td>
+                                            </tr>
+                                            <tr>
+                                                <td><input type="text" /></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <table>
+                                            <tr>
+                                                <td><input type="text" /></td>
+                                            </tr>
+                                            <tr>
+                                                <td><input type="text"  /></td>
+                                            </tr>
+                                            <tr>
+                                                <td><input type="text" /></td>
+                                            </tr>
+                                            <tr>
+                                                <td><input type="text" /></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table>
+                                            <tr>
+                                                <td><input type="text" /></td>
+                                            </tr>
+                                            <tr>
+                                                <td><input type="text"  /></td>
+                                            </tr>
+                                            <tr>
+                                                <td><input type="text" /></td>
+                                            </tr>
+                                            <tr>
+                                                <td><input type="text" /></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table>
+                                            <tr>
+                                                <td><input type="text" /></td>
+                                            </tr>
+                                            <tr>
+                                                <td><input type="text"  /></td>
+                                            </tr>
+                                            <tr>
+                                                <td><input type="text" /></td>
+                                            </tr>
+                                            <tr>
+                                                <td><input type="text" /></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <table>
+                                            <tr>
+                                                <td><input type="text" /></td>
+                                            </tr>
+                                            <tr>
+                                                <td><input type="text"  /></td>
+                                            </tr>
+                                            <tr>
+                                                <td><input type="text" /></td>
+                                            </tr>
+                                            <tr>
+                                                <td><input type="text" /></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table>
+                                            <tr>
+                                                <td><input type="text" /></td>
+                                            </tr>
+                                            <tr>
+                                                <td><input type="text"  /></td>
+                                            </tr>
+                                            <tr>
+                                                <td><input type="text" /></td>
+                                            </tr>
+                                            <tr>
+                                                <td><input type="text" /></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table>
+                                            <tr>
+                                                <td><input type="text" /></td>
+                                            </tr>
+                                            <tr>
+                                                <td><input type="text"  /></td>
+                                            </tr>
+                                            <tr>
+                                                <td><input type="text" /></td>
+                                            </tr>
+                                            <tr>
+                                                <td><input type="text" /></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>TOTAL</td>
+                                    <td style="background: red; color: white; font-weight: bold">0</td>
+                                    <td style="background: red; color: white;font-weight: bold">0</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="aui-group">
+                    <div class="aui-item">
+                        <table class="aui" style="width: 40%">
+                            <thead>
+                            <tr style="background: gray; color: #fff">
+                                <td colspan="3">Incorporación</td>
+                            </tr>
+                            <tr style="background: #DFE1E6; color: #000">
+                                <td>Esfuerzo HH</td>
+                                <td>Costo Total UF</td>
+                                <td>Certeza (%)</td>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>
+                                    <table>
+                                        <tr>
+                                            <td><input type="text" /></td>
+                                        </tr>
+                                        <tr>
+                                            <td><input type="text"  /></td>
+                                        </tr>
+                                        <tr>
+                                            <td><input type="text" /></td>
+                                        </tr>
+                                        <tr>
+                                            <td><input type="text" /></td>
+                                        </tr>
+                                    </table>
+                                </td>
+                                <td>
+                                    <table>
+                                        <tr>
+                                            <td><input type="text" /></td>
+                                        </tr>
+                                        <tr>
+                                            <td><input type="text"  /></td>
+                                        </tr>
+                                        <tr>
+                                            <td><input type="text" /></td>
+                                        </tr>
+                                        <tr>
+                                            <td><input type="text" /></td>
+                                        </tr>
+                                    </table>
+                                </td>
+                                <td>
+                                    <table>
+                                        <tr>
+                                            <td><input type="text" /></td>
+                                        </tr>
+                                        <tr>
+                                            <td><input type="text"  /></td>
+                                        </tr>
+                                        <tr>
+                                            <td><input type="text" /></td>
+                                        </tr>
+                                        <tr>
+                                            <td><input type="text" /></td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <table>
+                                        <tr>
+                                            <td><input type="text" /></td>
+                                        </tr>
+                                        <tr>
+                                            <td><input type="text"  /></td>
+                                        </tr>
+                                        <tr>
+                                            <td><input type="text" /></td>
+                                        </tr>
+                                        <tr>
+                                            <td><input type="text" /></td>
+                                        </tr>
+                                    </table>
+                                </td>
+                                <td>
+                                    <table>
+                                        <tr>
+                                            <td><input type="text" /></td>
+                                        </tr>
+                                        <tr>
+                                            <td><input type="text"  /></td>
+                                        </tr>
+                                        <tr>
+                                            <td><input type="text" /></td>
+                                        </tr>
+                                        <tr>
+                                            <td><input type="text" /></td>
+                                        </tr>
+                                    </table>
+                                </td>
+                                <td>
+                                    <table>
+                                        <tr>
+                                            <td><input type="text" /></td>
+                                        </tr>
+                                        <tr>
+                                            <td><input type="text"  /></td>
+                                        </tr>
+                                        <tr>
+                                            <td><input type="text" /></td>
+                                        </tr>
+                                        <tr>
+                                            <td><input type="text" /></td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <table>
+                                        <tr>
+                                            <td><input type="text" /></td>
+                                        </tr>
+                                        <tr>
+                                            <td><input type="text"  /></td>
+                                        </tr>
+                                        <tr>
+                                            <td><input type="text" /></td>
+                                        </tr>
+                                        <tr>
+                                            <td><input type="text" /></td>
+                                        </tr>
+                                    </table>
+                                </td>
+                                <td>
+                                    <table>
+                                        <tr>
+                                            <td><input type="text" /></td>
+                                        </tr>
+                                        <tr>
+                                            <td><input type="text"  /></td>
+                                        </tr>
+                                        <tr>
+                                            <td><input type="text" /></td>
+                                        </tr>
+                                        <tr>
+                                            <td><input type="text" /></td>
+                                        </tr>
+                                    </table>
+                                </td>
+                                <td>
+                                    <table>
+                                        <tr>
+                                            <td><input type="text" /></td>
+                                        </tr>
+                                        <tr>
+                                            <td><input type="text"  /></td>
+                                        </tr>
+                                        <tr>
+                                            <td><input type="text" /></td>
+                                        </tr>
+                                        <tr>
+                                            <td><input type="text" /></td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>TOTAL</td>
+                                <td style="background: red; color: white; font-weight: bold">0</td>
+                                <td style="background: red; color: white;font-weight: bold">0</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+</form>
+</body>
+</html>
