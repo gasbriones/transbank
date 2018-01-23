@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <!-- External dependencies -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-migrate/1.4.1/jquery-migrate.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/sinon.js/1.15.4/sinon.js"></script>
+    <script src="//unpkg.com/@atlassian/aui@7.1.1/dist/aui/js/aui.js"></script>
+    <script src="//unpkg.com/@atlassian/aui@7.1.1/dist/aui/js/aui-experimental.js"></script>
+    <script src="//unpkg.com/@atlassian/aui@7.1.1/dist/aui/js/aui-datepicker.js"></script>
+    <link rel="stylesheet" type="text/css" href="//unpkg.com/@atlassian/aui@7.1.1/dist/aui/css/aui.css"/>
+    <link rel="stylesheet" type="text/css" href="//unpkg.com/@atlassian/aui@7.1.1/dist/aui/css/aui-experimental.css"/>
+    <link rel="stylesheet" type="text/css" href="//unpkg.com/@atlassian/aui@7.1.1/dist/aui/css/forms.css"/>
+    <!-- / External dependencies -->
+</head>
+<body>
+<form class="aui">
+    <div class="aui-page-panel">
+        <div class="aui-page-panel-inner">
+            <section class="aui-page-panel-content">
+                <div class="aui-group">
+                    <div class="aui-item">
+                        <h5>11.1 Descripción análisis de riesgo alto nivel</h5>
+                        <div class="aui-message">
+                            <p>Disponibilidad de información histórica está sujeta a las condiciones técnicas del equipamiento y el estado de los medios involucrados, por lo que podría no ser factible recuperar la totalidad de la información</p>
+                        </div>
+                        <h5>11.2 Nivel de Riesgo</h5>
+                        <div class="aui-flatpack-example">
+                            <table class="aui">
+                                <tbody>
+                                    <tr>
+                                        <td><b>Clasificación Nivel de Riesgo</b></td>
+                                        <td>
+                                            <div class="field-group">
+                                                <select class="select" id="dBase" name="dBase" title="database select">
+                                                    <option>Bajo</option>
+                                                    <option>Medio</option>
+                                                    <option>Alto</option>
+                                                </select>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <h5>11.3 Esfuerzo y Costo</h5>
+                        <div class="aui-flatpack-example">
+                            <table class="aui">
+                                <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Descripción tarea</th>
+                                    <th>Esfuerzo HH</th>
+                                    <th>Costo Total UF</th>
+                                    <th>Certeza (%)</th>
+                                    <th>Proveedor</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td><input class="text long-field" type="text"  name="lname" title="last name"></td>
+                                    <td><input class="text long-field" type="text"  name="lname" title="last name"></td>
+                                    <td><input class="text long-field" type="text"  name="lname" title="last name"></td>
+                                    <td><input class="text long-field" type="text"  name="lname" title="last name"></td>
+                                    <td><input class="text long-field" type="text"  name="lname" title="last name"></td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td><input class="text long-field" type="text"  name="lname" title="last name"></td>
+                                    <td><input class="text long-field" type="text"  name="lname" title="last name"></td>
+                                    <td><input class="text long-field" type="text"  name="lname" title="last name"></td>
+                                    <td><input class="text long-field" type="text"  name="lname" title="last name"></td>
+                                    <td><input class="text long-field" type="text"  name="lname" title="last name"></td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td><input class="text long-field" type="text"  name="lname" title="last name"></td>
+                                    <td><input class="text long-field" type="text"  name="lname" title="last name"></td>
+                                    <td><input class="text long-field" type="text"  name="lname" title="last name"></td>
+                                    <td><input class="text long-field" type="text"  name="lname" title="last name"></td>
+                                    <td><input class="text long-field" type="text"  name="lname" title="last name"></td>
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td><input class="text long-field" type="text"  name="lname" title="last name"></td>
+                                    <td><input class="text long-field" type="text"  name="lname" title="last name"></td>
+                                    <td><input class="text long-field" type="text"  name="lname" title="last name"></td>
+                                    <td><input class="text long-field" type="text"  name="lname" title="last name"></td>
+                                    <td><input class="text long-field" type="text"  name="lname" title="last name"></td>
+                                </tr>
+                                <tr>
+                                    <td>5</td>
+                                    <td><input class="text long-field" type="text"  name="lname" title="last name"></td>
+                                    <td><input class="text long-field" type="text"  name="lname" title="last name"></td>
+                                    <td><input class="text long-field" type="text"  name="lname" title="last name"></td>
+                                    <td><input class="text long-field" type="text"  name="lname" title="last name"></td>
+                                    <td><input class="text long-field" type="text"  name="lname" title="last name"></td>
+                                </tr>
+                                <tr>
+                                    <td>6</td>
+                                    <td><input class="text long-field" type="text"  name="lname" title="last name"></td>
+                                    <td><input class="text long-field" type="text"  name="lname" title="last name"></td>
+                                    <td><input class="text long-field" type="text"  name="lname" title="last name"></td>
+                                    <td><input class="text long-field" type="text"  name="lname" title="last name"></td>
+                                    <td><input class="text long-field" type="text"  name="lname" title="last name"></td>
+                                </tr>
+                                <tr>
+                                    <td>7</td>
+                                    <td><input class="text long-field" type="text"  name="lname" title="last name"></td>
+                                    <td><input class="text long-field" type="text"  name="lname" title="last name"></td>
+                                    <td><input class="text long-field" type="text"  name="lname" title="last name"></td>
+                                    <td><input class="text long-field" type="text"  name="lname" title="last name"></td>
+                                    <td><input class="text long-field" type="text"  name="lname" title="last name"></td>
+                                </tr>
+                                <tr>
+                                    <td>8</td>
+                                    <td><input class="text long-field" type="text"  name="lname" title="last name"></td>
+                                    <td><input class="text long-field" type="text"  name="lname" title="last name"></td>
+                                    <td><input class="text long-field" type="text"  name="lname" title="last name"></td>
+                                    <td><input class="text long-field" type="text"  name="lname" title="last name"></td>
+                                    <td><input class="text long-field" type="text"  name="lname" title="last name"></td>
+                                </tr>
+                                <tr>
+                                    <td>9</td>
+                                    <td><input class="text long-field" type="text"  name="lname" title="last name"></td>
+                                    <td><input class="text long-field" type="text"  name="lname" title="last name"></td>
+                                    <td><input class="text long-field" type="text"  name="lname" title="last name"></td>
+                                    <td><input class="text long-field" type="text"  name="lname" title="last name"></td>
+                                    <td><input class="text long-field" type="text"  name="lname" title="last name"></td>
+                                </tr>
+                                <tr>
+                                    <td>10</td>
+                                    <td><input class="text long-field" type="text"  name="lname" title="last name"></td>
+                                    <td><input class="text long-field" type="text"  name="lname" title="last name"></td>
+                                    <td><input class="text long-field" type="text"  name="lname" title="last name"></td>
+                                    <td><input class="text long-field" type="text"  name="lname" title="last name"></td>
+                                    <td><input class="text long-field" type="text"  name="lname" title="last name"></td>
+                                </tr>
+                                <tr>
+                                    <td>11</td>
+                                    <td><input class="text long-field" type="text"  name="lname" title="last name"></td>
+                                    <td><input class="text long-field" type="text"  name="lname" title="last name"></td>
+                                    <td><input class="text long-field" type="text"  name="lname" title="last name"></td>
+                                    <td><input class="text long-field" type="text"  name="lname" title="last name"></td>
+                                    <td><input class="text long-field" type="text"  name="lname" title="last name"></td>
+                                </tr>
+                                <tr>
+                                    <td>12</td>
+                                    <td><input class="text long-field" type="text"  name="lname" title="last name"></td>
+                                    <td><input class="text long-field" type="text"  name="lname" title="last name"></td>
+                                    <td><input class="text long-field" type="text"  name="lname" title="last name"></td>
+                                    <td><input class="text long-field" type="text"  name="lname" title="last name"></td>
+                                    <td><input class="text long-field" type="text"  name="lname" title="last name"></td>
+                                </tr>
+                                <tr>
+                                    <td>13</td>
+                                    <td><input class="text long-field" type="text"  name="lname" title="last name"></td>
+                                    <td><input class="text long-field" type="text"  name="lname" title="last name"></td>
+                                    <td><input class="text long-field" type="text"  name="lname" title="last name"></td>
+                                    <td><input class="text long-field" type="text"  name="lname" title="last name"></td>
+                                    <td><input class="text long-field" type="text"  name="lname" title="last name"></td>
+                                </tr>
+                                <tr>
+                                    <td>14</td>
+                                    <td><input class="text long-field" type="text"  name="lname" title="last name"></td>
+                                    <td><input class="text long-field" type="text"  name="lname" title="last name"></td>
+                                    <td><input class="text long-field" type="text"  name="lname" title="last name"></td>
+                                    <td><input class="text long-field" type="text"  name="lname" title="last name"></td>
+                                    <td><input class="text long-field" type="text"  name="lname" title="last name"></td>
+                                </tr>
+                                <tr>
+                                    <td>15</td>
+                                    <td><input class="text long-field" type="text"  name="lname" title="last name"></td>
+                                    <td><input class="text long-field" type="text"  name="lname" title="last name"></td>
+                                    <td><input class="text long-field" type="text"  name="lname" title="last name"></td>
+                                    <td><input class="text long-field" type="text"  name="lname" title="last name"></td>
+                                    <td><input class="text long-field" type="text"  name="lname" title="last name"></td>
+                                </tr>
+                                <tr>
+                                    <td>16</td>
+                                    <td><input class="text long-field" type="text"  name="lname" title="last name"></td>
+                                    <td><input class="text long-field" type="text"  name="lname" title="last name"></td>
+                                    <td><input class="text long-field" type="text"  name="lname" title="last name"></td>
+                                    <td><input class="text long-field" type="text"  name="lname" title="last name"></td>
+                                    <td><input class="text long-field" type="text"  name="lname" title="last name"></td>
+                                </tr>
+                                <tr>
+                                    <td>17</td>
+                                    <td><input class="text long-field" type="text"  name="lname" title="last name"></td>
+                                    <td><input class="text long-field" type="text"  name="lname" title="last name"></td>
+                                    <td><input class="text long-field" type="text"  name="lname" title="last name"></td>
+                                    <td><input class="text long-field" type="text"  name="lname" title="last name"></td>
+                                    <td><input class="text long-field" type="text"  name="lname" title="last name"></td>
+                                </tr>
+                                <tr>
+                                    <td>18</td>
+                                    <td><input class="text long-field" type="text"  name="lname" title="last name"></td>
+                                    <td><input class="text long-field" type="text"  name="lname" title="last name"></td>
+                                    <td><input class="text long-field" type="text"  name="lname" title="last name"></td>
+                                    <td><input class="text long-field" type="text"  name="lname" title="last name"></td>
+                                    <td><input class="text long-field" type="text"  name="lname" title="last name"></td>
+                                </tr>
+                                <tr>
+                                    <td>19</td>
+                                    <td><input class="text long-field" type="text"  name="lname" title="last name"></td>
+                                    <td><input class="text long-field" type="text"  name="lname" title="last name"></td>
+                                    <td><input class="text long-field" type="text"  name="lname" title="last name"></td>
+                                    <td><input class="text long-field" type="text"  name="lname" title="last name"></td>
+                                    <td><input class="text long-field" type="text"  name="lname" title="last name"></td>
+                                </tr>
+                                <tr>
+                                    <td>20</td>
+                                    <td><input class="text long-field" type="text"  name="lname" title="last name"></td>
+                                    <td><input class="text long-field" type="text"  name="lname" title="last name"></td>
+                                    <td><input class="text long-field" type="text"  name="lname" title="last name"></td>
+                                    <td><input class="text long-field" type="text"  name="lname" title="last name"></td>
+                                    <td><input class="text long-field" type="text"  name="lname" title="last name"></td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td></td>
+                                    <td>TOTAL</td>
+                                    <td style="background: red; color: white; font-weight: bold">0</td>
+                                    <td style="background: red; color: white;font-weight: bold">0</td>
+                                    <td></td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <br>
+                        <div  class="aui-flatpack-example">
+                            <table class="aui">
+                                <thead>
+                                <tr style="background: gray; color: #fff">
+                                    <td colspan="2">Cuestionario Experto Riesgo</td>
+                                </tr>
+                                <tr style="background: #DFE1E6; color: #000">
+                                    <td colspan="2">Seguridad de la Información</td>
+
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td width="400">
+                                        ¿Maneja data secreta o confidencial, modifica, usa o crea llaves criptoráficas o certificados?
+                                    </td>
+                                    <td>
+                                        <div class="field-group">
+                                            <input class="text long-field" type="text" id="lname" name="lname" title="last name">
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td width="400">
+                                        ¿El proyecto involucra nueva infraestructura virtual o física?
+                                    </td>
+                                    <td>
+                                        <div class="field-group">
+                                            <input class="text long-field" type="text" id="lname" name="lname" title="last name">
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td width="400">
+                                        ¿El proyecto modifica la infraestructura virtual o física existente?
+                                    </td>
+                                    <td>
+                                        <div class="field-group">
+                                            <input class="text long-field" type="text" id="lname" name="lname" title="last name">
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td width="400">
+                                        Una vez que se disponga, ¿se consensuarán con Seguridad los layout de conectividad, puertos requeridos, segmentaciones de los servidores, dispositivos de comunicación que intervienen, segmentaciones de red y otros aspectos de diseño?
+                                    </td>
+                                    <td>
+                                        <div class="field-group">
+                                            <input class="text long-field" type="text" id="lname" name="lname" title="last name">
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td width="400">
+                                        Si hay desarrollo de software, ¿Se considera el cumplimiento de metodología segura de desarrollo OWASP?
+                                    </td>
+                                    <td>
+                                        <div class="field-group">
+                                            <input class="text long-field" type="text" id="lname" name="lname" title="last name">
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td width="400">
+                                        Si es un aplicativo crítico o expuesto a redes públicas o internet, ¿Se considera un EH por parte de un tercero calificado antes del paso a producción?
+                                    </td>
+                                    <td>
+                                        <div class="field-group">
+                                            <input class="text long-field" type="text" id="lname" name="lname" title="last name">
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr style="background: #DFE1E6; color: #000">
+                                    <td colspan="2">Cumplimiento y Certificación</td>
+                                </tr>
+                                <tr>
+                                    <td width="400">
+                                        ¿Crea un nuevo canal o modalidad de venta?
+                                    </td>
+                                    <td>
+                                        <div class="field-group">
+                                            <input class="text long-field" type="text" id="lname" name="lname" title="last name">
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td width="400">
+                                        ¿Es factible de monitorear por Triada?
+                                    </td>
+                                    <td>
+                                        <div class="field-group">
+                                            <input class="text long-field" type="text" id="lname" name="lname" title="last name">
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td width="400">
+                                        ¿Cumple con aspectos normativos de Marcas atingente a Fraude?
+                                    </td>
+                                    <td>
+                                        <div class="field-group">
+                                            <input class="text long-field" type="text" id="lname" name="lname" title="last name">
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td width="400">
+                                        ¿Impacto en Ley 19.913 o 20.393? UAF, responsabilidad.
+                                    </td>
+                                    <td>
+                                        <div class="field-group">
+                                            <input class="text long-field" type="text" id="lname" name="lname" title="last name">
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td width="400">
+                                        ¿Existe la posibilidad de presentar algún Riesgo de Fraude? ¿Cuáles?
+                                    </td>
+                                    <td>
+                                        <div class="field-group">
+                                            <input class="text long-field" type="text" id="lname" name="lname" title="last name">
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td width="400">
+                                        ¿Modifica definiciones o requerimientos de fraude ya considerados en contratos? Por ejemplo, contracargos.
+                                    </td>
+                                    <td>
+                                        <div class="field-group">
+                                            <input class="text long-field" type="text" id="lname" name="lname" title="last name">
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td width="400">
+                                        ¿Existe la posibilidad de presentar algún Riesgo de Fraude? ¿Cuáles?
+                                    </td>
+                                    <td>
+                                        <div class="field-group">
+                                            <input class="text long-field" type="text" id="lname" name="lname" title="last name">
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td width="400">
+                                        ¿Involucra nuevos modelos pos y/o pinpad y nueva versiones de aplicativo para definir requerimiento de EH?
+                                    </td>
+                                    <td>
+                                        <div class="field-group">
+                                            <input class="text long-field" type="text" id="lname" name="lname" title="last name">
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr style="background: #DFE1E6; color: #000">
+                                    <td colspan="2">Cumplimiento y Certificación</td>
+                                </tr>
+                                <tr>
+                                    <td width="400">
+                                        ¿Crea un nuevo canal o modalidad de venta?
+                                    </td>
+                                    <td>
+                                        <div class="field-group">
+                                            <input class="text long-field" type="text" id="lname" name="lname" title="last name">
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td width="400">
+                                        ¿Es factible de monitorear por Triada?
+                                    </td>
+                                    <td>
+                                        <div class="field-group">
+                                            <input class="text long-field" type="text" id="lname" name="lname" title="last name">
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td width="400">
+                                        ¿Cumple con aspectos normativos de Marcas atingente a Fraude?
+                                    </td>
+                                    <td>
+                                        <div class="field-group">
+                                            <input class="text long-field" type="text" id="lname" name="lname" title="last name">
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td width="400">
+                                        ¿Impacto en Ley 19.913 o 20.393? UAF, responsabilidad.
+                                    </td>
+                                    <td>
+                                        <div class="field-group">
+                                            <input class="text long-field" type="text" id="lname" name="lname" title="last name">
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td width="400">
+                                        ¿Existe la posibilidad de presentar algún Riesgo de Fraude? ¿Cuáles?
+                                    </td>
+                                    <td>
+                                        <div class="field-group">
+                                            <input class="text long-field" type="text" id="lname" name="lname" title="last name">
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td width="400">
+                                        ¿Modifica definiciones o requerimientos de fraude ya considerados en contratos? Por ejemplo, contracargos.
+                                    </td>
+                                    <td>
+                                        <div class="field-group">
+                                            <input class="text long-field" type="text" id="lname" name="lname" title="last name">
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td width="400">
+                                        ¿Existe la posibilidad de presentar algún Riesgo de Fraude? ¿Cuáles?
+                                    </td>
+                                    <td>
+                                        <div class="field-group">
+                                            <input class="text long-field" type="text" id="lname" name="lname" title="last name">
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td width="400">
+                                        ¿Involucra nuevos modelos pos y/o pinpad y nueva versiones de aplicativo para definir requerimiento de EH?
+                                    </td>
+                                    <td>
+                                        <div class="field-group">
+                                            <input class="text long-field" type="text" id="lname" name="lname" title="last name">
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr style="background: #DFE1E6; color: #000">
+                                    <td colspan="2">Control Interno de Riesgo (Riesgo Operacional)</td>
+                                </tr>
+                                <tr>
+                                    <td width="400">
+                                        ¿Impacta o tiene dependencia de algun proyecto en curso? Identifique cual de la Cartera de Proyectos.
+                                    </td>
+                                    <td>
+                                        <div class="field-group">
+                                            <input class="text long-field" type="text" id="lname" name="lname" title="last name">
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td width="400">
+                                        ¿Cuál es el beneficio para TBK de implementar la iniciativa?
+                                    </td>
+                                    <td>
+                                        <div class="field-group">
+                                            <input class="text long-field" type="text" id="lname" name="lname" title="last name">
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td width="400">
+                                        ¿Se  considera creación o modificación a Contratos y con cuáles contrapartes?
+                                    </td>
+                                    <td>
+                                        <div class="field-group">
+                                            <input class="text long-field" type="text" id="lname" name="lname" title="last name">
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td width="400">
+                                        ¿Impacto en Ley 19.913 o 20.393? UAF, responsabilidad.
+                                    </td>
+                                    <td>
+                                        <div class="field-group">
+                                            <input class="text long-field" type="text" id="lname" name="lname" title="last name">
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td width="400">
+                                        ¿Se identifican gaps o desviaciones en relación a aspectos normativos con reguladores locales? (SBIF, ABIF, BCCH, SII)
+                                    <td>
+                                        <div class="field-group">
+                                            <input class="text long-field" type="text" id="lname" name="lname" title="last name">
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td width="400">
+                                        ¿Se identifican gaps o desviación al cumplimiento de requisitos con las Marcas? Puntos de atención.
+                                    </td>
+                                    <td>
+                                        <div class="field-group">
+                                            <input class="text long-field" type="text" id="lname" name="lname" title="last name">
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td width="400">
+                                        ¿La iniciativa incluye canales presenciales para productos o servicios?
+                                    </td>
+                                    <td>
+                                        <div class="field-group">
+                                            <input class="text long-field" type="text" id="lname" name="lname" title="last name">
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td width="400">
+                                        Ha identificado algún impacto en materia legal - daño imagen - financiero - reputacional - liquidez - proveedor - de proyecto.
+                                    </td>
+                                    <td>
+                                        <div class="field-group">
+                                            <input class="text long-field" type="text" id="lname" name="lname" title="last name">
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td width="400">
+                                        ¿Involucra reestructuración organizacional / gestión del cambio?
+                                    </td>
+                                    <td>
+                                        <div class="field-group">
+                                            <input class="text long-field" type="text" id="lname" name="lname" title="last name">
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td width="400">
+                                        ¿La iniciativa, según juicio experto, conllevaría una situación de riesgo que visualice y no haya declarado?
+                                    </td>
+                                    <td>
+                                        <div class="field-group">
+                                            <input class="text long-field" type="text" id="lname" name="lname" title="last name">
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr style="background: #DFE1E6; color: #000">
+                                    <td colspan="2">Continuidad de Negocio</td>
+                                </tr>
+                                <tr>
+                                    <td width="400">
+                                        ¿Tiene definido horarios críticos de operación? Indique modalidad de servicio 5x8, 7x24
+                                    </td>
+                                    <td>
+                                        <div class="field-group">
+                                            <input class="text long-field" type="text" id="lname" name="lname" title="last name">
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td width="400">
+                                        ¿Debe definir plan de continuidad frente a indisponibilidad? Para cubrir escenarios de falla en TI, Instalaciones-Edificio, Proveedores, Personas
+                                    </td>
+                                    <td>
+                                        <div class="field-group">
+                                            <input class="text long-field" type="text" id="lname" name="lname" title="last name">
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td width="400">
+                                        ¿Requiere definir tiempo de recuperación de servicio en minutos–horas? ¿Cuál? ¿Cuánto tiempo podría estar sin servicio?
+                                    </td>
+                                    <td>
+                                        <div class="field-group">
+                                            <input class="text long-field" type="text" id="lname" name="lname" title="last name">
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td width="400">
+                                        ¿Requiere estrategia de respaldo de los datos? ¿Qué frecuencia? ¿A qué respaldo debiera ir para recuperar el servicio (hace un día, una semana, un mes)?
+                                    </td>
+                                    <td>
+                                        <div class="field-group">
+                                            <input class="text long-field" type="text" id="lname" name="lname" title="last name">
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td width="400">
+                                        ¿Requiere estrategia de DRP? ¿Cuál: Activo-Activo, Activo-Pasivo, HA (Alta disponibilidad Local)? ¿Operará en ambos data center?
+                                    <td>
+                                        <div class="field-group">
+                                            <input class="text long-field" type="text" id="lname" name="lname" title="last name">
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td width="400">
+                                        ¿Se apoya en Proveedores que ejecutan el proceso? (Operación) ¿Cuáles?
+                                    </td>
+                                    <td>
+                                        <div class="field-group">
+                                            <input class="text long-field" type="text" id="lname" name="lname" title="last name">
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td width="400">
+                                        ¿Se apoya en Proveedores que soportan el proceso (Soporte) tiempo de respuesta exigido para resolución de incidentes y/o problemas?
+                                    </td>
+                                    <td>
+                                        <div class="field-group">
+                                            <input class="text long-field" type="text" id="lname" name="lname" title="last name">
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td width="400">
+                                        ¿Requiere análisis de Capacidad? ¿Cuál es la proyección de crecimiento o expansión del negocio? y por ende aumento de la infraestructura (Sizing o Capacity)
+                                    </td>
+                                    <td>
+                                        <div class="field-group">
+                                            <input class="text long-field" type="text" id="lname" name="lname" title="last name">
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td width="400">
+                                        ¿Requiere estrategia de Paso Producción? ¿Cuál: Paralelo, Piloto, Big Bang?
+                                    </td>
+                                    <td>
+                                        <div class="field-group">
+                                            <input class="text long-field" type="text" id="lname" name="lname" title="last name">
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td width="400">
+                                        ¿Afecta a Procesos Críticos? ¿Cuáles?
+                                    </td>
+                                    <td>
+                                        <div class="field-group">
+                                            <input class="text long-field" type="text" id="lname" name="lname" title="last name">
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td width="400">
+                                        ¿Afecta Planes de continuidad (BCP o DRP) actuales? ¿Cuáles? (Considerar que deberán ajustarse)
+                                    </td>
+                                    <td>
+                                        <div class="field-group">
+                                            <input class="text long-field" type="text" id="lname" name="lname" title="last name">
+                                        </div>
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+</form>
+</body>
+</html>
