@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <!-- External dependencies -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-migrate/1.4.1/jquery-migrate.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/sinon.js/1.15.4/sinon.js"></script>
+    <script src="//unpkg.com/@atlassian/aui@7.1.1/dist/aui/js/aui.js"></script>
+    <script src="//unpkg.com/@atlassian/aui@7.1.1/dist/aui/js/aui-experimental.js"></script>
+    <script src="//unpkg.com/@atlassian/aui@7.1.1/dist/aui/js/aui-datepicker.js"></script>
+    <link rel="stylesheet" type="text/css" href="//unpkg.com/@atlassian/aui@7.1.1/dist/aui/css/aui.css"/>
+    <link rel="stylesheet" type="text/css" href="//unpkg.com/@atlassian/aui@7.1.1/dist/aui/css/aui-experimental.css"/>
+    <link rel="stylesheet" type="text/css" href="//unpkg.com/@atlassian/aui@7.1.1/dist/aui/css/forms.css"/>
+    <!-- / External dependencies -->
+</head>
+<body>
+<form class="aui">
+    <div class="aui-page-panel">
+        <div class="aui-page-panel-inner">
+            <section class="aui-page-panel-content">
+                <div class="aui-group">
+                    <div class="aui-item">
+                        <h5>12 Descripción Niveles de Severidad</h5>
+                        <div class="aui-message">
+                            <p>Indicar si la iniciativa disminuye el riesgo de materialización de un incidente Financiero, Transaccional, Reputacional y/o Cumplimiento</p>
+                        </div>
+                        <div class="aui-flatpack-example">
+                            <table class="aui">
+                                <tbody>
+                                    <tr>
+                                        <td><b>Severidad</b></td>
+                                        <td>
+                                            <div class="field-group">
+                                                <select class="select" id="dBase" name="dBase" title="database select">
+                                                    <option>N/A</option>
+                                                    <option>1</option>
+                                                    <option>2</option>
+                                                    <option>3</option>
+                                                    <option>4</option>
+                                                    <option>5</option>
+                                                </select>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><b>Tipo de Incidente</b></td>
+                                        <td>
+                                            <div class="field-group">
+                                                <select class="select" id="dBase" name="dBase" title="database select">
+                                                    <option>N/A</option>
+                                                    <option>Financiero</option>
+                                                    <option>Transaccional</option>
+                                                    <option>Reputacional</option>
+                                                    <option>Cumplimiento</option>
+                                                </select>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="aui-flatpack-example">
+                            <table class="aui">
+                                <thead>
+                                <tr>
+                                    <th>Severidad</th>
+                                    <th>Descriptor</th>
+                                    <th>Financiera</th>
+                                    <th>TXS No procesadas</th>
+                                    <th>Reputacional</th>
+                                    <th>Cumplimiento (Legal-Normativo-Regulatorio)</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                   <td>1</td>
+                                    <td>Muy Alto</td>
+                                    <td>Pérdida financiera >MM $2.500</td>
+                                    <td>>500 mil</td>
+                                    <td>Afectación significativa a clientes emisores, tarjetahabientes o entidades relacionadas con difusión pública persistente</td>
+                                    <td width="550">
+                                        Multas monetarias de cualquier autoridad sobre UF 1.000<br>
+                                        Multas de las marcas sobre USD 100.000 o reiteración acumulada superior a este monto<br>
+                                        Juicios civiles como demandado de cuantía superior a UF 5.000<br>
+                                        Cualquier sentencia penal que implique sanciones para la compañía, sentencias desfavorables en demanda colectiva o cualquier sentencia que afecte la responsabilidad de Ejecutivos o Directores de la empresa o la terminación de contratos con varios emisores<br>
+                                        Inicio de procesos en materia de libre competencia
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>Mayor</td>
+                                    <td>Pérdida financiera >MM $500 y ≤MM$ 2.500</td>
+                                    <td>>60 mil y ≤500 mil</td>
+                                    <td>Afectación directa a Clientes, Emisores, Tarjetahabientes o entidades relacionadas con difusión pública por periodo corto de tiempo</td>
+                                    <td width="550">
+                                        Reporte regulador con situaciones que requieren acciones de corección de corto plazo o reiteración de incumplimiento de compromisos con el Regulador<br>
+                                        Multas monetarias de cualquier autoridad, entre UF 100 y UF 1.000<br>
+                                        Multas de las marcas sobre USD 50.000 y hasta UDS 100.000 o reiteración acumulada en 6 meses entre estos montos<br>
+                                        Incumplimientos normativos internos reiterados o que pudieran implicar pérdidas monetarias inminentes o sanciones de las autoridades<br>
+                                        Juicios civiles como demandado de cuantía entre UF 2.000 y UF 5.000<br>
+                                        Cualquier acción penal que pudiere implicar sanciones para la compañía o el inicio de cualquier demanda colectiva o el inicio de cualquier acción que afecte la responsabilidad de Ejecutivos o Directores de la empresa<br>
+                                        Conocimiento del inicio de investigaciones en materia de libre competencia, de proyectos de regulaciones que afecten significativamente a la empresa o de antecedentes que pudieren implicar la terminación de servicios a clientes emisores o establecimientos comerciales relevantes
+
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>Medio </td>
+                                    <td>Pérdida financiera >MM $100 y ≤MM$ 500</td>
+                                    <td>>20 mil y ≤60 mil</td>
+                                    <td>Conocimiento externo con impacto menor en afectacción de la imagen de la empresa. Afectación a grupo reducido de Clientes o Tarjetahabientes</td>
+                                    <td width="550">
+                                        Reporte Regulador con situaciones que requieren acciones de corerección en el mediano/largo plazo o incumplimiento de compromisos con el Regulador<br>
+                                        Multas monetarias de cualquier autoridad, bajo UF 100<br>
+                                        Multas de las marcas sobre UDS 10.000 y hasta USD 50.000 o reiteración bajo ese monto<br>
+                                        Incumplimientos normativos internos que pudieran implicar pérdidas monetarias o reportes al regulador<br>
+                                        Jucios civiles como demandado de cuantía inferior a UF 2.000<br>
+                                        Conocimiento de proyectos de regulaciones que pudieren afectar a la empresa
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td>Menor </td>
+                                    <td>Pérdida financiera >MM $15 y ≤MM$ 100</td>
+                                    <td>> 5 mil y  ≤20 mil</td>
+                                    <td>Conocimiento interno (Incluyendo proveedores) que causa conmoción. Eventualmente puede ser conocido por clientes sin causar impacto</td>
+                                    <td width="550">
+                                        Reporte al regulador con situaciones que requieren acciones de seguimiento<br>
+                                        Amonestaciones del regulador no monetarias<br>
+                                        Multas de las marcas internacionales no significativas (bajo USD 10.000)
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>5</td>
+                                    <td>Insignificante  </td>
+                                    <td>Pérdida financiera ≤MM$ 15</td>
+                                    <td><5 mil</td>
+                                    <td>Conocimiento interno con impacto moderado. No existe afectación a clientes</td>
+                                    <td width="550">
+                                        Incumplimiento internos menores y/o que no requieren ser reportador al Regulador
+
+                                    </td>
+                                </tr>
+
+
+                                </tbody>
+
+                            </table>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+</form>
+</body>
+</html>
