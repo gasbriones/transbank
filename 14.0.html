@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <!-- External dependencies -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-migrate/1.4.1/jquery-migrate.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/sinon.js/1.15.4/sinon.js"></script>
+    <script src="//unpkg.com/@atlassian/aui@7.1.1/dist/aui/js/aui.js"></script>
+    <script src="//unpkg.com/@atlassian/aui@7.1.1/dist/aui/js/aui-experimental.js"></script>
+    <script src="//unpkg.com/@atlassian/aui@7.1.1/dist/aui/js/aui-datepicker.js"></script>
+    <link rel="stylesheet" type="text/css" href="//unpkg.com/@atlassian/aui@7.1.1/dist/aui/css/aui.css"/>
+    <link rel="stylesheet" type="text/css" href="//unpkg.com/@atlassian/aui@7.1.1/dist/aui/css/aui-experimental.css"/>
+    <link rel="stylesheet" type="text/css" href="//unpkg.com/@atlassian/aui@7.1.1/dist/aui/css/forms.css"/>
+    <!-- / External dependencies -->
+</head>
+<body>
+<form class="aui">
+    <div class="aui-page-panel">
+        <div class="aui-page-panel-inner">
+            <section class="aui-page-panel-content">
+                <div class="aui-group">
+                    <div class="aui-item">
+                        <h5>13 PLAZO</h5>
+                        <div class="aui-flatpack-example">
+                            <br>
+                            <table class="aui">
+                                <thead>
+                                <tr style="background: #DFE1E6; color: #000">
+                                    <th colspan="7">Aquí se registran: Pago de proveedores, Consultorias, Enlaces.</th>
+                                </tr>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Tarea</th>
+                                    <th>Esfuerzo HH</th>
+                                    <th>Costo Total UF</th>
+                                    <th>Certeza (%)</th>
+                                    <th>Proveedor</th>
+                                    <th>Concepto</th>
+                                </tr>
+                                </thead>
+
+                                <tbody>
+                                <tr>
+                                    <td><input class="text long-field" type="text" name="lname" title="last name"></td>
+                                    <td><input class="text long-field" type="text" name="lname" title="last name"></td>
+                                    <td><input class="text long-field" type="text" name="lname" title="last name"></td>
+                                    <td><input class="text long-field" type="text" name="lname" title="last name"></td>
+                                    <td><input class="text long-field" type="text" name="lname" title="last name"></td>
+                                    <td><input class="text long-field" type="text" name="lname" title="last name"></td>
+                                    <td><input class="text long-field" type="text" name="lname" title="last name"></td>
+                                </tr>
+                                <tr>
+                                    <td><input class="text long-field" type="text" name="lname" title="last name"></td>
+                                    <td><input class="text long-field" type="text" name="lname" title="last name"></td>
+                                    <td><input class="text long-field" type="text" name="lname" title="last name"></td>
+                                    <td><input class="text long-field" type="text" name="lname" title="last name"></td>
+                                    <td><input class="text long-field" type="text" name="lname" title="last name"></td>
+                                    <td><input class="text long-field" type="text" name="lname" title="last name"></td>
+                                    <td><input class="text long-field" type="text" name="lname" title="last name"></td>
+                                </tr>
+                                <tr>
+                                    <td><input class="text long-field" type="text" name="lname" title="last name"></td>
+                                    <td><input class="text long-field" type="text" name="lname" title="last name"></td>
+                                    <td><input class="text long-field" type="text" name="lname" title="last name"></td>
+                                    <td><input class="text long-field" type="text" name="lname" title="last name"></td>
+                                    <td><input class="text long-field" type="text" name="lname" title="last name"></td>
+                                    <td><input class="text long-field" type="text" name="lname" title="last name"></td>
+                                    <td><input class="text long-field" type="text" name="lname" title="last name"></td>
+                                </tr>
+                                <tr>
+                                    <td><input class="text long-field" type="text" name="lname" title="last name"></td>
+                                    <td><input class="text long-field" type="text" name="lname" title="last name"></td>
+                                    <td><input class="text long-field" type="text" name="lname" title="last name"></td>
+                                    <td><input class="text long-field" type="text" name="lname" title="last name"></td>
+                                    <td><input class="text long-field" type="text" name="lname" title="last name"></td>
+                                    <td><input class="text long-field" type="text" name="lname" title="last name"></td>
+                                    <td><input class="text long-field" type="text" name="lname" title="last name"></td>
+                                </tr>
+                                <tr>
+                                    <td><input class="text long-field" type="text" name="lname" title="last name"></td>
+                                    <td><input class="text long-field" type="text" name="lname" title="last name"></td>
+                                    <td><input class="text long-field" type="text" name="lname" title="last name"></td>
+                                    <td><input class="text long-field" type="text" name="lname" title="last name"></td>
+                                    <td><input class="text long-field" type="text" name="lname" title="last name"></td>
+                                    <td><input class="text long-field" type="text" name="lname" title="last name"></td>
+                                    <td><input class="text long-field" type="text" name="lname" title="last name"></td>
+                                </tr>
+                                <tr>
+                                    <td><input class="text long-field" type="text" name="lname" title="last name"></td>
+                                    <td><input class="text long-field" type="text" name="lname" title="last name"></td>
+                                    <td><input class="text long-field" type="text" name="lname" title="last name"></td>
+                                    <td><input class="text long-field" type="text" name="lname" title="last name"></td>
+                                    <td><input class="text long-field" type="text" name="lname" title="last name"></td>
+                                    <td><input class="text long-field" type="text" name="lname" title="last name"></td>
+                                    <td><input class="text long-field" type="text" name="lname" title="last name"></td>
+                                </tr>
+                                <tr>
+                                    <td><input class="text long-field" type="text" name="lname" title="last name"></td>
+                                    <td><input class="text long-field" type="text" name="lname" title="last name"></td>
+                                    <td><input class="text long-field" type="text" name="lname" title="last name"></td>
+                                    <td><input class="text long-field" type="text" name="lname" title="last name"></td>
+                                    <td><input class="text long-field" type="text" name="lname" title="last name"></td>
+                                    <td><input class="text long-field" type="text" name="lname" title="last name"></td>
+                                    <td><input class="text long-field" type="text" name="lname" title="last name"></td>
+                                </tr>
+                                <tr>
+                                    <td style="background: red; color: white; font-weight: bold">0</td>
+                                    <td style="background: red; color: white;font-weight: bold">0</td>
+                                    <td colspan="5"></td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+</form>
+</body>
+</html>
