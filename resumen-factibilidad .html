@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <!-- External dependencies -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-migrate/1.4.1/jquery-migrate.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/sinon.js/1.15.4/sinon.js"></script>
+    <script src="//unpkg.com/@atlassian/aui@7.1.1/dist/aui/js/aui.js"></script>
+    <script src="//unpkg.com/@atlassian/aui@7.1.1/dist/aui/js/aui-experimental.js"></script>
+    <script src="//unpkg.com/@atlassian/aui@7.1.1/dist/aui/js/aui-datepicker.js"></script>
+    <link rel="stylesheet" type="text/css" href="//unpkg.com/@atlassian/aui@7.1.1/dist/aui/css/aui.css"/>
+    <link rel="stylesheet" type="text/css" href="//unpkg.com/@atlassian/aui@7.1.1/dist/aui/css/aui-experimental.css"/>
+    <link rel="stylesheet" type="text/css" href="//unpkg.com/@atlassian/aui@7.1.1/dist/aui/css/forms.css"/>
+    <!-- / External dependencies -->
+</head>
+<body>
+<form class="aui">
+    <div class="aui-page-panel">
+        <div class="aui-page-panel-inner">
+            <section class="aui-page-panel-content">
+                <div class="aui-group">
+                    <div class="aui-item">
+                        <h5>Resumen Factibilidad </h5>
+                        <br>
+                        <div class="aui-flatpack-example">
+                            <table class="aui">
+                                <tr style="background: gray; color: #fff">
+                                    <td colspan="2">&nbsp;</td>                                </tr>
+                                <tbody>
+                                <tr>
+                                    <td>NOMBRE INICIATIVA</td>
+                                    <td><input class="text long-field" type="text" value="" /> </td>
+                                </tr>
+                                <tr>
+                                    <td>NOMBRE SPONSOR</td>
+                                    <td><input class="text long-field" type="text" value="" /> </td>
+                                </tr>
+                                <tr>
+                                    <td>NOMBRE SOLICITANTE</td>
+                                    <td><input class="text long-field" type="text" value="" /> </td>
+                                </tr>
+                                <tr>
+                                    <td>NOMBRE GESTOR DE LA DEMANDA</td>
+                                    <td><input class="text long-field" type="text" value="" /> </td>
+                                </tr>
+                                <tr>
+                                    <td>CLASIFICACIÓN</td>
+                                    <td><input class="text long-field" type="text" value="" /> </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <br>
+                        <h5>Detalle Esfuerzo y Costos</h5>
+                        <br>
+                        <div class="aui-flatpack-example">
+                            <table class="aui">
+                                <thead>
+                                    <tr style="background: gray; color: #fff">
+                                        <td colspan="5">&nbsp;</td>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td colspan="2">&nbsp;</td>
+                                    <td style="background: red; color: white;font-weight: bold">Esfuerzo HH</td>
+                                    <td>&nbsp;</td>
+                                    <td style="background: red; color: white;font-weight: bold">Costo Total UF</td>
+                                </tr>
+                                <tr>
+                                    <td style="background: gray; color: #fff">7.0 Impacto Arquitectura</td>
+                                    <td colspan="4"></td>
+                                </tr>
+                                <tr>
+                                    <td>Impacto en Arquitectura</td>
+                                    <td>&nbsp;</td>
+                                    <td>0</td>
+                                    <td>&nbsp;</td>
+                                    <td>0</td>
+                                </tr>
+                                <tr>
+                                    <td style="background: gray; color: #fff">8.0 Análisis de procesos</td>
+                                    <td colspan="4"></td>
+                                </tr>
+                                <tr>
+                                    <td>Impacto en procesos</td>
+                                    <td>&nbsp;</td>
+                                    <td>0</td>
+                                    <td>&nbsp;</td>
+                                    <td>0</td>
+                                </tr>
+
+                                <tr>
+                                    <td style="background: gray; color: #fff">9.0 Impacto Infraestructura</td>
+                                    <td colspan="4"></td>
+                                </tr>
+                                <tr>
+                                    <td>Impacto en Infraestructura - Incorporación</td>
+                                    <td>&nbsp;</td>
+                                    <td>0</td>
+                                    <td>&nbsp;</td>
+                                    <td>0</td>
+                                </tr>
+                                <tr>
+                                    <td>Impacto en Infraestructura - Mejoras</td>
+                                    <td>&nbsp;</td>
+                                    <td>0</td>
+                                    <td>&nbsp;</td>
+                                    <td>0</td>
+                                </tr>
+
+                                <tr>
+                                    <td style="background: gray; color: #fff">10.0 Impacto Aplicativo y QA</td>
+                                    <td colspan="4"></td>
+                                </tr>
+                                <tr>
+                                    <td>Impacto en Aplicativo - Desarrollo</td>
+                                    <td>&nbsp;</td>
+                                    <td>0</td>
+                                    <td>&nbsp;</td>
+                                    <td>0</td>
+                                </tr>
+                                <tr>
+                                    <td>Impacto en Aplicativo - Certificación</td>
+                                    <td>&nbsp;</td>
+                                    <td>0</td>
+                                    <td>&nbsp;</td>
+                                    <td>0</td>
+                                </tr>
+                                <tr>
+                                    <td>Riesgo, conciliación e integración - Desarrollo</td>
+                                    <td>&nbsp;</td>
+                                    <td>0</td>
+                                    <td>&nbsp;</td>
+                                    <td>0</td>
+                                </tr>
+                                <tr>
+                                    <td>Riesgo, conciliación e integración - Certificación</td>
+                                    <td>&nbsp;</td>
+                                    <td>0</td>
+                                    <td>&nbsp;</td>
+                                    <td>0</td>
+                                </tr>
+
+                                <tr>
+                                    <td style="background: gray; color: #fff">11.0 Análisis de Riesgo</td>
+                                    <td colspan="4"></td>
+                                </tr>
+                                <tr>
+                                    <td>Análisis de Riesgo</td>
+                                    <td>&nbsp;</td>
+                                    <td>0</td>
+                                    <td>&nbsp;</td>
+                                    <td>0</td>
+                                </tr>
+                                <tr>
+                                    <td style="background: gray; color: #fff">14.0 Otros Costos Asociados</td>
+                                    <td colspan="4"></td>
+                                </tr>
+                                <tr>
+                                    <td>Otros Costos</td>
+                                    <td>&nbsp;</td>
+                                    <td>0</td>
+                                    <td>&nbsp;</td>
+                                    <td>0</td>
+                                </tr>
+                                <tr>
+                                    <td style="background: red; color: white;font-weight: bold">TOTAL</td>
+                                    <td>&nbsp;</td>
+                                    <td style="background: red; color: white;font-weight: bold">0</td>
+                                    <td>&nbsp;</td>
+                                    <td style="background: red; color: white;font-weight: bold">0</td>
+                                </tr>
+                                <tr>
+                                    <td colspan="5">&nbsp;</td>
+                                </tr>
+                                <tr>
+                                    <td style="background: gray; color: #fff">3.0 Caso de Negocios</td>
+                                    <td colspan="4"></td>
+                                </tr>
+                                <tr>
+                                    <td>Ingresos</td>
+                                    <td>&nbsp;</td>
+                                    <td style="background: red; color: white;font-weight: bold">0</td>
+                                    <td colspan="2">&nbsp;</td>
+                                </tr>
+                                <tr>
+                                    <td>Costos</td>
+                                    <td>&nbsp;</td>
+                                    <td style="background: red; color: white;font-weight: bold">0</td>
+                                    <td colspan="2">&nbsp;</td>
+                                </tr>
+                                <tr>
+                                    <td>Resultado</td>
+                                    <td>&nbsp;</td>
+                                    <td style="background: red; color: white;font-weight: bold">0</td>
+                                    <td colspan="2">&nbsp;</td>
+                                </tr>
+                                <tr>
+                                    <td>Inversión</td>
+                                    <td>&nbsp;</td>
+                                    <td style="background: red; color: white;font-weight: bold">0</td>
+                                    <td colspan="2">&nbsp;</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+</form>
+</body>
+</html>
